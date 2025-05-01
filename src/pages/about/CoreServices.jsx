@@ -1,32 +1,32 @@
-import Container from '@/components/container/Container'
-import React from 'react'
+// import Container from '@/components/container/Container'
+// import React from 'react'
 
-function CoreServices({ CoreService }) {
+// function CoreServices({ CoreService }) {
 
-    const CoreService = [
-        {
-            service: "Data Science Consulting"
-        },
-        {
+//     const CoreService = [
+//         {
+//             service: "Data Science Consulting"
+//         },
+//         {
 
-        }
-    ]
+//         }
+//     ]
 
-  return (
-    <>
-        <Container>
-            <div className='w-full grid grid-cols-5 '>
-                {
-                    CoreService.map((cs) => (
-                        <div className=''>
+//   return (
+//     <>
+//         <Container>
+//             <div className='w-full grid grid-cols-5 '>
+//                 {
+//                     CoreService.map((cs) => (
+//                         <div className=''>
 
-                        </div>
-                    ))
-                }
-            </div>
-        </Container>
-    </>
-  )
-}
+//                         </div>
+//                     ))
+//                 }
+//             </div>
+//         </Container>
+//     </>
+//   )
+// }
 
-export default CoreServices
+// export default CoreServices
