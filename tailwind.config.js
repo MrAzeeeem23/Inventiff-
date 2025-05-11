@@ -5,7 +5,7 @@ export default {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
+
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
@@ -17,7 +17,7 @@ export default {
         bebas_neue_r: ["Bebas Neue", "serif"],
         afacad: ["Afacad", "sans-serif"],
         michroma_regular: ["Michroma", "sans-serif"],
-        exo: ["Exo 2", "sans-serif"]
+        exo: ["Exo 2", "sans-serif"],
       },
       keyframes: {
         gradient: {
@@ -25,14 +25,24 @@ export default {
           "50%": { backgroundPosition: "100% 50%" },
           "100%": { backgroundPosition: "0% 50%" },
         },
+        spotlight: {
+          "0%": {
+            opacity: 0,
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
       },
       animation: {
         gradient: "gradient 8s linear infinite",
-        spin_slow: 'spin 20s linear infinite'
+        spotlight: "spotlight 2s ease .75s 1 forwards",
+        spin_slow: "spin 20s linear infinite",
       },
     },
   },
   darkMode: "selector",
   plugins: [],
 };
-

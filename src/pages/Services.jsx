@@ -3,42 +3,34 @@ import Head from "next/head";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import Container from "../components/container/Container";
-
-// Data for analytics services
-const analyticsServices = [
-  {
-    title: "Strategy and Advisory",
-    slug: "strategy-advisory",
-    points: ["Standard Reporting", "Query / Drill Down", "Ad hoc Reporting"],
-    description: "Expert guidance on analytics strategy to transform data into actionable business insights."
-  },
-  {
-    title: "Engineer Your Data",
-    slug: "data-engineering",
-    points: ["Multidimensional Report", "Predictive Modelling", "Forecasting"],
-    description: "Build robust data engineering solutions to generate predictive insights and forecasts."
-  },
-  {
-    title: "Differentiate with AI/ML",
-    slug: "ai-ml",
-    points: ["Simulation", "Recommendation"],
-    description: "Leverage artificial intelligence and machine learning to create competitive advantages."
-  },
-  {
-    title: "Operationalize Insights",
-    slug: "operationalize",
-    points: [
-      "Analytics Roadmap",
-      "Data Strategy",
-      "Platform Strategy",
-      "ML Ops",
-    ],
-    description: "Transform analytics insights into operational strategies with proven implementation methods."
-  },
-];
+import blogService from "@/appwrite_controller/service";
 
 export default function AnalyticsServices() {
+
+  const [service, setService] = useState([]);
+  const [loader, setLoader] = useState(true);
   const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await blogService.getService();
+        const parsedServices = response.documents.map((doc) => ({
+          ...doc,
+          points: JSON.parse(doc.points),
+        }));
+        setService(parsedServices);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoader(false);
+      }
+    };
+    fetchData();
+  },);
+
+  console.log(service)
+
   const titleRef = useRef(null);
   const cardsRef = useRef(null);
   const cardRefs = useRef([]);
@@ -65,7 +57,7 @@ export default function AnalyticsServices() {
       gsap.registerPlugin(ScrollTrigger);
       
       // Reset refs array
-      cardRefs.current = cardRefs.current.slice(0, analyticsServices.length);
+      cardRefs.current = cardRefs.current.slice(0, service.length);
       
       // Title animation
       if (titleRef.current) {
@@ -122,10 +114,10 @@ export default function AnalyticsServices() {
       initGSAP();
     }, 100);
   }, [isClient]);
-
+ 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Advanced Analytics Services | Inventiff Analytics</title>
         <meta 
           name="description" 
@@ -143,7 +135,7 @@ export default function AnalyticsServices() {
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://yourwebsite.com/analytics-services" />
-      </Head>
+      </Head> */}
       <div 
         ref={sectionRef} 
         className="w-full py-16 relative overflow-hidden"
@@ -154,6 +146,7 @@ export default function AnalyticsServices() {
         
         <Container>
           <section 
+            id="Services"
             className="relative z-10"
             aria-labelledby="analytics-services-heading"
           >
@@ -174,7 +167,7 @@ export default function AnalyticsServices() {
                 ref={cardsRef} 
                 className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 flex-1 w-full"
               >
-                {analyticsServices.map((service, idx) => (
+                {service.map((service, idx) => (
                   <div
                     key={idx}
                     ref={el => cardRefs.current[idx] = el}
@@ -188,14 +181,14 @@ export default function AnalyticsServices() {
                         {service.points.map((point, i) => (
                           <li key={i} className="flex items-start gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-purple-400/70 mt-2" aria-hidden="true"></span>
-                            <span>{point}</span>
+                            <span>{point.title}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
       
                     <Link 
-                      href={`/services/${service.slug}`}
+                      href={`/services/${service.$id}`}
                       className="text-sm font-afacad text-purple-600 dark:text-purple-400 font-semibold flex items-center gap-2 border-t pt-4 border-gray-200 dark:border-gray-700 w-fit"
                       aria-label={`Learn more about ${service.title}`}
                     >

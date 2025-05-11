@@ -1,51 +1,22 @@
-'use client'; // Required for client-side-only code like GSAP
+'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import blogService from '@/appwrite_controller/service';
 import Loader from '@/components/utility/Loader';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
+import { useMediaQuery } from '@/hooks/useMediaQuery'; // You'll need to create this custom hook
+
 
 function AllBlogs() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const blogRefs = useRef([]);
+  
+  // Check if device is mobile/small screen
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
-  useEffect(() => {
-    const loadAnimations = async () => {
-      if (typeof window !== 'undefined') {
-        const gsap = (await import('gsap')).default;
-        const { ScrollTrigger } = await import('gsap/ScrollTrigger');
-        gsap.registerPlugin(ScrollTrigger);
-  
-        const elements = blogRefs.current;
-  
-        gsap.set(elements, {
-          opacity: 0,
-          y: 50,
-          willChange: 'transform, opacity',
-        });
-  
-        gsap.to(elements, {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.15,
-          scrollTrigger: {
-            trigger: elements[0]?.parentElement, 
-            start: 'top 90%',
-            toggleActions: 'play none none reset',
-          },
-        });
-      }
-    };
-  
-    loadAnimations();
-  }, [posts]);
-  
   useEffect(() => {
     const fetchPost = async () => {
       try {
@@ -77,9 +48,8 @@ function AllBlogs() {
         {posts.map((post, index) => (
           <div
             key={post.$id}
-            ref={(el) => (blogRefs.current[index] = el)}
             className={`flex flex-col overflow-hidden transition-all duration-300 ${
-              hoveredIndex !== null && hoveredIndex !== index
+              !isMobile && hoveredIndex !== null && hoveredIndex !== index
                 ? 'opacity-50 blur-sm scale-[0.98]'
                 : 'hover:scale-[1.01] opacity-100'
             }`}

@@ -9,8 +9,9 @@ function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navItems = [
     { name: "Industries", path: "/industries" },
-    { name: "Product", path: "/product" },
+    { name: "Product", path: "products/Products" },
     { name: "About", path: "/About" },
+    { name: "Contact", path: "/Contact"}
   ];
 
   const headerRef = useRef(null);
@@ -108,9 +109,6 @@ function Header() {
                 {item.name}
               </a>
             ))}
-            <Link href="#Blogs" scroll={false}>
-                blog
-            </Link>
           </nav>
 
           <div className="hidden md:flex">

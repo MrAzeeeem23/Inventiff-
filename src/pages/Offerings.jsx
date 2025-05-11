@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Head from "next/head";
 import Container from "../components/container/Container";
-import { Atom, ChartNetwork } from "lucide-react";
 
 // Data for offerings
 const offeringsData = [
@@ -151,7 +150,7 @@ function Offerings() {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Data Science Offerings | Inventiff Analytics</title>
         <meta
           name="description"
@@ -171,9 +170,9 @@ function Offerings() {
         />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
-      </Head>
+      </Head> */}
 
-      <div className="relative">
+      <section id="Offerings" className="relative">
         <Container>
           <div className="absolute inset-0 bg-gradient-to-br from-white to-purple-100 dark:hidden"></div>
           <div className="absolute inset-0 bg-gradient-to-br from-black to-purple-900/30 hidden dark:block"></div>
@@ -186,12 +185,6 @@ function Offerings() {
             <div className="flex flex-col md:flex-row md:h-screen">
               {/* Left */}
               <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center transition">
-                <ChartNetwork
-                  strokeWidth={0.75}
-                  size={220}
-                  className="absolute -z-20 -rotate-6 text-blue-400/40 dark:text-blue-400/10"
-                />
-
                 <h1
                   id="offerings-heading"
                   className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-4 md:mb-6 drop-shadow-lg font-afacad transition-all"
@@ -222,11 +215,6 @@ function Offerings() {
                       className="relative bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl rounded-2xl shadow-xl hover:scale-105 transition-all p-6 text-left font-Poppins overflow-hidden"
                     >
                       {/* Decorative Rotating Chart */}
-                      <Atom
-                        strokeWidth={0.5}
-                        size={500}
-                        className="absolute bottom-[-50%] right-[-50%] -z-10 text-blue-400/40 dark:text-blue-400/10 animate-spin_slow"
-                      />
 
                       <h2 className="text-3xl font-afacad text-black dark:text-white mb-2">
                         {item.title}
@@ -246,7 +234,7 @@ function Offerings() {
             </div>
           </section>
         </Container>
-      </div>
+      </section>
     </>
   );
 }

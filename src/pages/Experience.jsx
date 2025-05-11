@@ -94,7 +94,7 @@ function Experience(z) {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Our Team Experience | Inventiff Analytics</title>
         <meta name="description" content="Inventiff Analytics brings decades of experience in data analytics, healthcare, manufacturing, and financial services to solve your most complex business challenges." />
         <meta name="keywords" content="data analytics, healthcare experience, financial services expertise, manufacturing analytics" />
@@ -102,9 +102,10 @@ function Experience(z) {
         <meta property="og:description" content="20+ years in Data Analytics, 30+ years in Healthcare, and 10+ years in Manufacturing & Financial Services." />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
-      </Head>
+      </Head> */}
       <Container>
         <section 
+          id="Experience"
           className="w-full px-6 py-16 text-gray-800 dark:text-gray-100" 
           aria-labelledby="experience-heading"
         >
