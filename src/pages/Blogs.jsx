@@ -1,13 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import dynamic from "next/dynamic";
-import { Spotlight } from "@/components/ui/Spotlight";
 
 import Container from "../components/container/Container";
 import blogService from "../appwrite_controller/service";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const ShinyText = dynamic(() => import("../animations/ShinyText"), {
   ssr: false,

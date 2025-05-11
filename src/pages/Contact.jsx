@@ -1,8 +1,5 @@
-"use client";
-
 import { useState, useEffect, useRef } from "react";
 import Container from "../components/container/Container";
-import Head from "next/head";
 import { Toaster, toast } from "react-hot-toast";
 
 export const metadata = {
