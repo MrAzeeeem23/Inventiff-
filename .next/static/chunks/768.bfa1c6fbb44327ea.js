@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[768],{5768:(e,s,n)=>{n.r(s),n.d(s,{default:()=>t});var r=n(7876);n(4232);let t=function(){return(0,r.jsx)("div",{className:"flex items-center justify-center min-h-screen",children:(0,r.jsx)("span",{className:"loader invert dark:invert-0"})})}}}]);

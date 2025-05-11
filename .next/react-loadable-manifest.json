@@ -1,0 +1,91 @@
+{
+  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_app": {
+    "id": 57,
+    "files": [
+      "static/chunks/57.268c8c590d7f2802.js"
+    ]
+  },
+  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
+    "id": 4100,
+    "files": [
+      "static/chunks/100.4e4209ea0fc171d4.js"
+    ]
+  },
+  "components\\layout\\Header.jsx -> gsap": {
+    "id": 6941,
+    "files": [
+      "static/chunks/281c3f4d-1f2286b641b69594.js",
+      "static/chunks/941-06b3f73d8870b0c1.js"
+    ]
+  },
+  "components\\layout\\Header.jsx -> gsap/ScrollTrigger": {
+    "id": 7232,
+    "files": [
+      "static/chunks/232.e54b617d78954947.js"
+    ]
+  },
+  "pages\\Blogs.jsx -> ../animations/ShinyText": {
+    "id": 3679,
+    "files": [
+      "static/chunks/679.079ad9f7e62358bf.js"
+    ]
+  },
+  "pages\\Blogs.jsx -> ../components/utility/Loader": {
+    "id": 5768,
+    "files": [
+      "static/chunks/768.bfa1c6fbb44327ea.js"
+    ]
+  },
+  "pages\\Contact.jsx -> emailjs-com": {
+    "id": 5239,
+    "files": [
+      "static/chunks/239.6095a4142a9861de.js"
+    ]
+  },
+  "pages\\Experience.jsx -> ../animations/Countup": {
+    "id": 4644,
+    "files": [
+      "static/chunks/27-ac929d2655a1e43e.js",
+      "static/chunks/644.3e58a40d837ce86d.js"
+    ]
+  },
+  "pages\\Experience.jsx -> gsap": {
+    "id": 6941,
+    "files": [
+      "static/chunks/281c3f4d-1f2286b641b69594.js",
+      "static/chunks/941-06b3f73d8870b0c1.js"
+    ]
+  },
+  "pages\\Experience.jsx -> gsap/dist/ScrollTrigger": {
+    "id": 6276,
+    "files": [
+      "static/chunks/276.321420db65125050.js"
+    ]
+  },
+  "pages\\Offerings.jsx -> gsap": {
+    "id": 6941,
+    "files": [
+      "static/chunks/281c3f4d-1f2286b641b69594.js",
+      "static/chunks/941-06b3f73d8870b0c1.js"
+    ]
+  },
+  "pages\\Offerings.jsx -> gsap/dist/ScrollTrigger": {
+    "id": 6276,
+    "files": [
+      "static/chunks/276.321420db65125050.js"
+    ]
+  },
+  "pages\\Services.jsx -> gsap": {
+    "id": 6941,
+    "files": [
+      "static/chunks/281c3f4d-1f2286b641b69594.js",
+      "static/chunks/941-06b3f73d8870b0c1.js"
+    ]
+  },
+  "pages\\Services.jsx -> gsap/dist/ScrollTrigger": {
+    "id": 6276,
+    "files": [
+      "static/chunks/276.321420db65125050.js"
+    ]
+  }
+}
