@@ -150,7 +150,7 @@ function Offerings() {
 
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>Data Science Offerings | Inventiff Analytics</title>
         <meta
           name="description"
@@ -170,7 +170,7 @@ function Offerings() {
         />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
-      </Head> */}
+      </Head>
 
       <section id="Offerings" className="relative">
         <Container>

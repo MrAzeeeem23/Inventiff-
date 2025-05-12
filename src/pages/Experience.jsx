@@ -29,19 +29,17 @@ function Experience(z) {
   const cardRefs = useRef([]);
 
   useEffect(() => {
-    // Initialize GSAP and ScrollTrigger
     const initGSAP = async () => {
-      // Import GSAP and ScrollTrigger dynamically
+      
       const gsapModule = await import("gsap");
       const gsap = gsapModule.default;
       
       const ScrollTriggerModule = await import("gsap/dist/ScrollTrigger");
       const ScrollTrigger = ScrollTriggerModule.ScrollTrigger;
       
-      // Register ScrollTrigger plugin
       gsap.registerPlugin(ScrollTrigger);
       
-      // Animate heading if ref exists
+      
       if (headingRef.current) {
         gsap.fromTo(
           headingRef.current,
@@ -83,9 +81,9 @@ function Experience(z) {
       });
     };
 
-    // Run GSAP initialization
+
     if (typeof window !== 'undefined') {
-      // Small timeout to ensure DOM is fully ready
+
       setTimeout(() => {
         initGSAP();
       }, 100);
@@ -94,7 +92,7 @@ function Experience(z) {
 
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>Our Team Experience | Inventiff Analytics</title>
         <meta name="description" content="Inventiff Analytics brings decades of experience in data analytics, healthcare, manufacturing, and financial services to solve your most complex business challenges." />
         <meta name="keywords" content="data analytics, healthcare experience, financial services expertise, manufacturing analytics" />
@@ -102,7 +100,7 @@ function Experience(z) {
         <meta property="og:description" content="20+ years in Data Analytics, 30+ years in Healthcare, and 10+ years in Manufacturing & Financial Services." />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
-      </Head> */}
+      </Head>
       <Container>
         <section 
           id="Experience"

@@ -37,7 +37,6 @@ function Hero() {
       onClick: () => scrollToSection("Services"),
     },
   ];
-  
 
   useEffect(() => {
     const tl = gsap.timeline({
@@ -69,7 +68,6 @@ function Hero() {
       <div className="absolute backdrop-blur-sm inset-0 bg-black/40 dark:bg-black/50 z-0" />
 
       <div className="relative z-10 h-full flex flex-col justify-center mx-8 md:mx-16">
-
         <div ref={headingRef}>
           <ShinyText
             text="Inventiff Analytics"
@@ -89,7 +87,6 @@ function Hero() {
           Solutions Tailored for Your{" "}
           <span className="text-white/50">Success</span>.
         </p>
-
 
         <Dock
           items={dockItems}

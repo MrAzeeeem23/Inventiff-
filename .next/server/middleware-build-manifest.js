@@ -1,1 +1,35 @@
-globalThis.__BUILD_MANIFEST={polyfillFiles:["static/chunks/polyfills-42372ed130431b0a.js"],devFiles:[],ampDevFiles:[],lowPriorityFiles:[],rootMainFiles:[],rootMainFilesTree:{},pages:{"/":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/58474bfb-c5741004f537f355.js","static/chunks/281c3f4d-1f2286b641b69594.js","static/chunks/883-4c5c262046b5c2cf.js","static/chunks/941-06b3f73d8870b0c1.js","static/chunks/27-ac929d2655a1e43e.js","static/chunks/522-2ee75988b9fd0fb3.js","static/chunks/556-3680b2c0e66cd932.js","static/chunks/207-1a6e179322149b56.js","static/chunks/708-b87dad25be7f8cb4.js","static/chunks/711-5da1226b603bf044.js","static/chunks/pages/index-ce2afcb062884c61.js"],"/About":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/69b51223-d8148c4fbf3fc830.js","static/chunks/4559568c-c52e6fa11c2ee0bd.js","static/chunks/pages/About-c71ace7e8204a5ce.js"],"/Blogs":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/58474bfb-c5741004f537f355.js","static/chunks/883-4c5c262046b5c2cf.js","static/chunks/522-2ee75988b9fd0fb3.js","static/chunks/556-3680b2c0e66cd932.js","static/chunks/711-5da1226b603bf044.js","static/chunks/pages/Blogs-a0f259062358eefa.js"],"/Contact":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/640-d462416c599a75e9.js","static/chunks/708-b87dad25be7f8cb4.js","static/chunks/pages/Contact-0c9f6731aac0fbb1.js"],"/Experience":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/522-2ee75988b9fd0fb3.js","static/chunks/pages/Experience-0ac30bc207077299.js"],"/Home":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/281c3f4d-1f2286b641b69594.js","static/chunks/941-06b3f73d8870b0c1.js","static/chunks/27-ac929d2655a1e43e.js","static/chunks/207-1a6e179322149b56.js","static/chunks/pages/Home-17b9dfaf5308310d.js"],"/Offerings":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/pages/Offerings-8913fa0e39601ad7.js"],"/Services":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/58474bfb-c5741004f537f355.js","static/chunks/883-4c5c262046b5c2cf.js","static/chunks/pages/Services-1fa15d543e8e5a68.js"],"/_app":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/css/cd0cf9c5a4b3c37f.css","static/chunks/pages/_app-eb3313de4b2e1fb8.js"],"/_error":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/pages/_error-6ba75d581b05348e.js"],"/about/Values":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/pages/about/Values-01640e3d0a7efd00.js"],"/about/WhoWreAre":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/pages/about/WhoWreAre-fcbed7ebaea0cd75.js"],"/about/Why":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/pages/about/Why-f10f0623ed90af33.js"],"/blogs/AllBlogs":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/58474bfb-c5741004f537f355.js","static/chunks/883-4c5c262046b5c2cf.js","static/chunks/pages/blogs/AllBlogs-4c535b57e3fe4a38.js"],"/blogs/[slug]":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/58474bfb-c5741004f537f355.js","static/chunks/883-4c5c262046b5c2cf.js","static/chunks/pages/blogs/[slug]-a4be47aa5970e4a1.js"],"/products/Products":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/58474bfb-c5741004f537f355.js","static/chunks/883-4c5c262046b5c2cf.js","static/chunks/pages/products/Products-3707c559a9916168.js"],"/services/[slug]":["static/chunks/webpack-007c4493001b71b0.js","static/chunks/framework-2f335d22a7318891.js","static/chunks/main-755337d5b99a197c.js","static/chunks/58474bfb-c5741004f537f355.js","static/chunks/281c3f4d-1f2286b641b69594.js","static/chunks/883-4c5c262046b5c2cf.js","static/chunks/941-06b3f73d8870b0c1.js","static/chunks/pages/services/[slug]-4aef143fa94f82a5.js"]},ampFirstPages:[]},globalThis.__BUILD_MANIFEST.lowPriorityFiles=["/static/"+process.env.__NEXT_BUILD_ID+"/_buildManifest.js",,"/static/"+process.env.__NEXT_BUILD_ID+"/_ssgManifest.js"];
+globalThis.__BUILD_MANIFEST = {
+  "polyfillFiles": [
+    "static/chunks/polyfills.js"
+  ],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "rootMainFilesTree": {},
+  "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
+    "/_app": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_app.js"
+    ],
+    "/_error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
+    ]
+  },
+  "ampFirstPages": []
+};
+globalThis.__BUILD_MANIFEST.lowPriorityFiles = [
+"/static/" + process.env.__NEXT_BUILD_ID + "/_buildManifest.js",
+,"/static/" + process.env.__NEXT_BUILD_ID + "/_ssgManifest.js",
+
+];

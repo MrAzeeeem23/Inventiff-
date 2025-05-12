@@ -104,12 +104,12 @@ export default function AnalyticsServices() {
       }
 
       return () => {
-        // Clean up animations
+  
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       };
     };
 
-    // Initialize animations with a small delay to ensure DOM is ready
+  
     setTimeout(() => {
       initGSAP();
     }, 100);
@@ -117,7 +117,7 @@ export default function AnalyticsServices() {
  
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>Advanced Analytics Services | Inventiff Analytics</title>
         <meta 
           name="description" 
@@ -135,7 +135,7 @@ export default function AnalyticsServices() {
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://yourwebsite.com/analytics-services" />
-      </Head> */}
+      </Head>
       <div 
         ref={sectionRef} 
         className="w-full py-16 relative overflow-hidden"

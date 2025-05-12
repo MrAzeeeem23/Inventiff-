@@ -11,7 +11,7 @@ export default function BlogDetail() {
   const [blog, setBlog] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [showContent, setShowContent] = useState(false); // for animation
+  const [showContent, setShowContent] = useState(false); 
 
   useEffect(() => {
     if (!slug) return;
@@ -20,8 +20,6 @@ export default function BlogDetail() {
       try {
         const response = await blogService.getBlogById(slug);
         setBlog(response);
-
-        // Wait a tick before showing (blur animation)
         setTimeout(() => {
           setShowContent(true);
         }, 100); 

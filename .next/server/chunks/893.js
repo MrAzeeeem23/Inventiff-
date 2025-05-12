@@ -1,1 +1,0 @@
-"use strict";exports.id=893,exports.ids=[893],exports.modules={3893:(e,s,r)=>{r.r(s),r.d(s,{default:()=>i});var t=r(8732);r(2015);let i=function(){return(0,t.jsx)("div",{className:"flex items-center justify-center min-h-screen",children:(0,t.jsx)("span",{className:"loader invert dark:invert-0"})})}}};

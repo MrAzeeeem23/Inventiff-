@@ -1,1 +1,0 @@
-"use strict";exports.id=254,exports.ids=[254],exports.modules={6254:(e,s,t)=>{t.r(s),t.d(s,{default:()=>r});var d=t(8732);let r=({text:e,disabled:s=!1,speed:t=5,className:r=""})=>{let l=`${t}s`;return(0,d.jsx)("div",{className:`shiny-text ${s?"disabled":""} ${r}`,style:{animationDuration:l},children:e})}}};

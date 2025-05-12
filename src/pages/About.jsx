@@ -81,11 +81,11 @@ We are a privately held company with a growing team of 11–50 employees, offeri
 
           {/* Globe Animation */}
           <div className="flex justify-center items-center my-28">
-          <Interactive3DGraph 
-          nodeColor="#ffffff"
-          edgeColor="#ffffff"
-          className="invert dark:invert-0"
-        />
+            <Interactive3DGraph
+              nodeColor="#ffffff"
+              edgeColor="#ffffff"
+              className="invert dark:invert-0"
+            />
           </div>
 
           {/* Values Section */}

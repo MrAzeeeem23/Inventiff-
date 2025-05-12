@@ -5,7 +5,7 @@ import blogService from '@/appwrite_controller/service';
 import Loader from '@/components/utility/Loader';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
-import { useMediaQuery } from '@/hooks/useMediaQuery'; // You'll need to create this custom hook
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 
 function AllBlogs() {

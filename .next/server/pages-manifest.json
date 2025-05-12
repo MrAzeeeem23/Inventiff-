@@ -1,22 +1,6 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/About": "pages/About.html",
-  "/Blogs": "pages/Blogs.html",
-  "/Experience": "pages/Experience.html",
-  "/Home": "pages/Home.html",
-  "/Offerings": "pages/Offerings.html",
-  "/Services": "pages/Services.html",
-  "/about/Values": "pages/about/Values.html",
-  "/about/WhoWreAre": "pages/about/WhoWreAre.html",
-  "/about/Why": "pages/about/Why.html",
-  "/api/hello": "pages/api/hello.js",
-  "/blogs/AllBlogs": "pages/blogs/AllBlogs.html",
-  "/": "pages/index.html",
-  "/blogs/[slug]": "pages/blogs/[slug].html",
-  "/products/Products": "pages/products/Products.html",
-  "/services/[slug]": "pages/services/[slug].html",
-  "/Contact": "pages/Contact.html",
-  "/404": "pages/404.html"
+  "/_document": "pages/_document.js",
+  "/": "pages/index.js"
 }

@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[679],{3679:(e,t,a)=>{a.r(t),a.d(t,{default:()=>c});var s=a(7876);let c=e=>{let{text:t,disabled:a=!1,speed:c=5,className:n=""}=e;return(0,s.jsx)("div",{className:"shiny-text ".concat(a?"disabled":""," ").concat(n),style:{animationDuration:"".concat(c,"s")},children:t})}}}]);

@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import blogService from "@/appwrite_controller/service";
