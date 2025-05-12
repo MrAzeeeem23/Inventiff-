@@ -1,6 +1,5 @@
 import "@/styles/globals.css";
 import Layout from "@/components/layout/Layout";
-import "../styles/ShinyText.css";
 import "../styles/Loader.css"
 
 import "swiper/css";

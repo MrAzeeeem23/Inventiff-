@@ -1,12 +1,10 @@
-
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
 import dynamic from "next/dynamic";
-
 import Container from "../components/container/Container";
 import blogService from "../appwrite_controller/service";
+import Head from "next/head";
 
 const ShinyText = dynamic(() => import("../animations/ShinyText"), {
   ssr: false,
@@ -74,7 +72,7 @@ function Blog() {
 
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>Latest Blogs | Inventiff Analytics</title>
         <meta
           name="description"
@@ -94,7 +92,7 @@ function Blog() {
         />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
-      </Head> */}
+      </Head>
       <Container>
         <section
           id="Blogs"
@@ -137,15 +135,7 @@ function Blog() {
                           />
                         </div>
                         <div className="p-5 flex flex-col flex-grow">
-                          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                            {post.Title}
-                          </h3>
-                          <p className="text-gray-600 dark:text-gray-300 text-sm flex-grow mb-4">
-                            {post.Description.length > 100
-                              ? `${post.Description.slice(0, 120)}...`
-                              : post.Description}
-                          </p>
-                          <p className="text-gray-500 text-sm font-afacad mb-5">
+                          <p className="text-gray-500 text-sm font-afacad mb-2">
                             {new Date(post.$createdAt).toLocaleDateString(
                               "en-US",
                               {
@@ -154,6 +144,14 @@ function Blog() {
                                 day: "2-digit",
                               }
                             )}
+                          </p>
+                          <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                            {post.Title}
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-300 text-sm flex-grow mb-4">
+                            {post.Description.length > 100
+                              ? `${post.Description.slice(0, 120)}...`
+                              : post.Description}
                           </p>
                           <Link
                             href={`/blogs/${post.$id}`}

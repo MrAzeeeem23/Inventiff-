@@ -73,13 +73,13 @@ function Hero() {
             text="Inventiff Analytics"
             disabled={false}
             speed={3}
-            className="text-xl md:text-xl font-bold mb-2 drop-shadow-md text-red-600 font-afacad"
+            className="text-3xl md:text-4xl font-bold mb-2 drop-shadow-md font-afacad"
           />
         </div>
 
         <p
           ref={paraRef}
-          className="text-slate-800 dark:text-slate-600 font-semibold text-6xl max-w-4xl drop-shadow-lg font-afacad"
+          className="text-slate-800 dark:text-slate-600 font-semibold text-5xl md:text-6xl max-w-4xl drop-shadow-lg font-afacad"
         >
           <span className="dark:text-white/50">Shaping</span> Tomorrow Through
           Cutting-Edge <span className="text-white/50">Data Science</span> and{" "}

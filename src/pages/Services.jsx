@@ -6,10 +6,13 @@ import Container from "../components/container/Container";
 import blogService from "@/appwrite_controller/service";
 
 export default function AnalyticsServices() {
-
   const [service, setService] = useState([]);
   const [loader, setLoader] = useState(true);
   const sectionRef = useRef(null);
+  const titleRef = useRef(null);
+  const cardsRef = useRef(null);
+  const cardRefs = useRef([]);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -21,20 +24,13 @@ export default function AnalyticsServices() {
         }));
         setService(parsedServices);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       } finally {
         setLoader(false);
       }
     };
     fetchData();
-  },);
-
-  console.log(service)
-
-  const titleRef = useRef(null);
-  const cardsRef = useRef(null);
-  const cardRefs = useRef([]);
-  const [isClient, setIsClient] = useState(false);
+  }, []);
 
   // Set client-side rendering flag
   useEffect(() => {
@@ -42,79 +38,84 @@ export default function AnalyticsServices() {
   }, []);
 
   useEffect(() => {
-    if (!isClient) return;
+    if (!isClient || service.length === 0) return;
 
     // Initialize GSAP animations
     const initGSAP = async () => {
-      // Dynamically import GSAP
-      const gsapModule = await import("gsap");
-      const gsap = gsapModule.default;
-      
-      const ScrollTriggerModule = await import("gsap/dist/ScrollTrigger");
-      const ScrollTrigger = ScrollTriggerModule.ScrollTrigger;
-      
-      // Register ScrollTrigger plugin
-      gsap.registerPlugin(ScrollTrigger);
-      
-      // Reset refs array
-      cardRefs.current = cardRefs.current.slice(0, service.length);
-      
-      // Title animation
-      if (titleRef.current) {
-        gsap.fromTo(
-          titleRef.current,
-          { 
-            opacity: 0,
-            y: 20 
-          },
-          { 
-            opacity: 1,
-            y: 0,
-            duration: 0.8,
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 80%",
-              toggleActions: "play none none none"
+      try {
+        // Dynamically import GSAP
+        const gsapModule = await import("gsap");
+        const gsap = gsapModule.default;
+        
+        const ScrollTriggerModule = await import("gsap/ScrollTrigger");
+        const ScrollTrigger = ScrollTriggerModule.ScrollTrigger;
+        
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger);
+        
+        // Ensure refs are updated
+        cardRefs.current = cardRefs.current.slice(0, service.length);
+        
+        // Title animation
+        if (titleRef.current) {
+          gsap.fromTo(
+            titleRef.current,
+            { 
+              opacity: 0,
+              y: 20 
+            },
+            { 
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 80%",
+                toggleActions: "play none none none"
+              }
             }
-          }
-        );
-      }
+          );
+        }
 
-      // Staggered card animations
-      if (cardsRef.current && cardRefs.current.length > 0) {
-        gsap.fromTo(
-          cardRefs.current.filter(Boolean),
-          { 
-            opacity: 0,
-            y: 30
-          },
-          { 
-            opacity: 1,
-            y: 0,
-            duration: 0.6,
-            stagger: 0.1,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: cardsRef.current,
-              start: "top 80%",
-              toggleActions: "play none none none"
+        // Staggered card animations
+        if (cardsRef.current && cardRefs.current.length > 0) {
+          gsap.fromTo(
+            cardRefs.current.filter(Boolean),
+            { 
+              opacity: 0,
+              y: 30
+            },
+            { 
+              opacity: 1,
+              y: 0,
+              duration: 0.6,
+              stagger: 0.1,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: cardsRef.current,
+                start: "top 80%",
+                toggleActions: "play none none none"
+              }
             }
-          }
-        );
+          );
+        }
+      } catch (error) {
+        console.error("GSAP animation error:", error);
       }
-
-      return () => {
-  
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-      };
     };
 
-  
-    setTimeout(() => {
+    // Initialize animations with a small delay to ensure DOM is ready
+    const animationTimer = setTimeout(() => {
       initGSAP();
     }, 100);
-  }, [isClient]);
+
+    // Cleanup function
+    return () => {
+      clearTimeout(animationTimer);
+    };
+  }, [isClient, service]);
  
+
   return (
     <>
       <Head>

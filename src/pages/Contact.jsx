@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import Container from "../components/container/Container";
 import { Toaster, toast } from "react-hot-toast";
+import {Facebook, Instagram, Linkedin, Twitter} from "lucide-react"
 
 export const metadata = {
-  title: "Contact Us | Your Company Name - Get in Touch With Our Team",
+  title: "Contact Us | Inventiff Analytics - Get in Touch With Our Team",
   description:
     "Have questions or need assistance? Our team is ready to help. Fill out our contact form for quick responses to your inquiries about our services and solutions.",
   openGraph: {
@@ -11,27 +12,27 @@ export const metadata = {
     description:
       "Have questions or need assistance? Our team is ready to help. Fill out our contact form for quick responses to your inquiries about our services and solutions.",
     type: "website",
-    url: "https://yourcompany.com/contact",
+    url: "https://Inventiff.com/contact",
     images: [
       {
-        url: "https://yourcompany.com/images/contact-og-image.jpg",
+        url: "https://Inventiff.com/images/contact-og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Contact Your Company Name",
+        alt: "Contact Your Inventiff Analytics",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us | Your Company Name - Get in Touch With Our Team",
+    title: "Contact Us | Inventiff Analytics - Get in Touch With Our Team",
     description:
       "Have questions or need assistance? Our team is ready to help. Fill out our contact form for quick responses to your inquiries about our services and solutions.",
-    site: "@yourcompanyhandle",
-    creator: "@yourcompanyhandle",
+    site: "@InventiffAnalytics",
+    creator: "@InventiffAnalytics",
     images: ["https://yourcompany.com/images/contact-twitter-card.jpg"],
   },
   alternates: {
-    canonical: "https://yourcompany.com/contact",
+    canonical: "https://Inventiff.com/contact",
   },
 };
 
@@ -54,12 +55,12 @@ export default function ContactForm() {
   const contactPageSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact Your Company Name",
-    "description": "Contact form for Your Company Name. Reach out to our team with any questions or inquiries.",
-    "url": "https://yourcompany.com/contact",
+    "name": "Contact Inventiff Analytics",
+    "description": "Contact form for Inventiff Analytics. Reach out to our team with any questions or inquiries.",
+    "url": "https://Inventiff.com/contact",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-555-123-4567",
+      "telephone": "+91 8862097207",
       "contactType": "customer service",
       "availableLanguage": ["English"],
       "areaServed": ["US", "CA", "UK", "AU"],
@@ -75,8 +76,8 @@ export default function ContactForm() {
     },
     "mainEntity": {
       "@type": "Organization",
-      "name": "Your Company Name",
-      "logo": "https://yourcompany.com/logo.png",
+      "name": "Inventiff Analytics",
+      "logo": "https://Inventiff.com/logo.png",
       "sameAs": [
         "https://www.facebook.com/yourcompany",
         "https://www.twitter.com/yourcompany",
@@ -181,7 +182,7 @@ export default function ContactForm() {
         aria-labelledby="contact-heading"
       >
         <Container>
-          <div className="w-full max-w-5xl mx-auto flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16">
+          <div className="w-full max-w-7xl mx-2 flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16">
             <div className="w-full lg:w-2/5">
               <h1
                 id="contact-heading"
@@ -203,10 +204,10 @@ export default function ContactForm() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-medium">Email Us</h3>
+                    <h3 className="font-Poppins">Email Us</h3>
                     <p className="text-gray-600 dark:text-gray-400">
                       <a href="mailto:info@yourcompany.com" className="hover:underline">
-                        info@yourcompany.com
+                        info@Inventff.com
                       </a>
                     </p>
                   </div>
@@ -219,10 +220,10 @@ export default function ContactForm() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-medium">Call Us</h3>
+                    <h3 className="font-Poppins">Call Us</h3>
                     <p className="text-gray-600 dark:text-gray-400">
                       <a href="tel:+15551234567" className="hover:underline">
-                        +1 (555) 123-4567
+                        +91 8862097207
                       </a>
                     </p>
                   </div>
@@ -236,11 +237,11 @@ export default function ContactForm() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-medium">Visit Us</h3>
+                    <h3 className="font-Poppins">Visit Us</h3>
                     <address className="text-gray-600 dark:text-gray-400 not-italic">
                       123 Business Avenue<br />
                       Suite 200<br />
-                      San Francisco, CA 94107
+                      Pune, Maharastra
                     </address>
                   </div>
                 </div>
@@ -258,7 +259,7 @@ export default function ContactForm() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block mb-2 text-sm font-medium"
+                      className="block mb-2 text-sm font-Poppins"
                     >
                       Full Name <span className="text-red-500">*</span>
                     </label>
@@ -275,7 +276,7 @@ export default function ContactForm() {
                           ? "border-red-500 focus:ring-2 focus:ring-red-500" 
                           : "border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       } transition`}
-                      placeholder="John Doe"
+                      placeholder="Azeem"
                       aria-required="true"
                       aria-invalid={!!formErrors.name}
                       aria-describedby={formErrors.name ? "name-error" : undefined}
@@ -293,7 +294,7 @@ export default function ContactForm() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block mb-2 text-sm font-medium"
+                      className="block mb-2 text-sm font-Poppins"
                     >
                       Email Address <span className="text-red-500">*</span>
                     </label>
@@ -310,7 +311,7 @@ export default function ContactForm() {
                           ? "border-red-500 focus:ring-2 focus:ring-red-500" 
                           : "border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       } transition`}
-                      placeholder="johndoe@example.com"
+                      placeholder="azeem@email.com"
                       aria-required="true"
                       aria-invalid={!!formErrors.email}
                       aria-describedby={formErrors.email ? "email-error" : undefined}
@@ -328,7 +329,7 @@ export default function ContactForm() {
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block mb-2 text-sm font-medium"
+                      className="block mb-2 text-sm font-Poppins"
                     >
                       Subject
                     </label>
@@ -347,7 +348,7 @@ export default function ContactForm() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block mb-2 text-sm font-medium"
+                      className="block mb-2 text-sm font-Poppins"
                     >
                       Message <span className="text-red-500">*</span>
                     </label>
@@ -383,7 +384,7 @@ export default function ContactForm() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-black dark:bg-white text-white dark:text-black font-bold py-3 px-6 rounded-xl hover:opacity-90 transition-all focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-black dark:bg-white text-white dark:text-black font-afacad py-3 px-6 rounded-xl hover:opacity-90 transition-all focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed"
                       aria-busy={isSubmitting}
                     >
                       {isSubmitting ? (
@@ -405,21 +406,22 @@ export default function ContactForm() {
           </div>
           
           <div className="mt-16 text-center">
-            <h2 className="text-xl md:text-2xl font-medium mb-6">Follow Us</h2>
+            <h2 className="text-xl md:text-2xl font-afacad mb-6">Follow Us</h2>
             <div className="flex justify-center space-x-4">
-              {['facebook', 'twitter', 'instagram', 'linkedin'].map((social) => (
+              {[{name: "facebook", icon: <Facebook strokeWidth={1} />},
+               {name: "X", icon: <Twitter strokeWidth={1} />},
+               {name: "instagram", icon: <Instagram strokeWidth={1} />},
+               {name: "linkrfin", icon: <Linkedin strokeWidth={1} />}].map((social) => (
                 <a
                   key={social}
-                  href={`https://${social}.com/yourcompany`}
+                  href={`https://${social.name}.com/Inventiff`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                  aria-label={`Follow us on ${social}`}
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  aria-label={`Follow us on ${social.name}`}
                 >
-                  <span className="sr-only">Follow us on {social}</span>
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.477 2 2 6.477 2 12c0 5.523 4.477 10 10 10s10-4.477 10-10c0-5.523-4.477-10-10-10z" />
-                  </svg>
+                  <span className="sr-only">Follow us on {social.name}</span>
+                  {social.icon}
                 </a>
               ))}
             </div>

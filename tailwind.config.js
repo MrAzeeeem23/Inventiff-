@@ -35,11 +35,16 @@ export default {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+        shine: {
+          "0%": { "background-position": "100%" },
+          "100%": { "background-position": "-100%" },
+        }
       },
       animation: {
         gradient: "gradient 8s linear infinite",
         spotlight: "spotlight 2s ease .75s 1 forwards",
         spin_slow: "spin 20s linear infinite",
+        shine: "shine 5s linear infinite",
       },
     },
   },

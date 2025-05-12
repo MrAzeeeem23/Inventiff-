@@ -69,10 +69,10 @@
     "id": "pages\\Services.jsx -> gsap",
     "files": []
   },
-  "pages\\Services.jsx -> gsap/dist/ScrollTrigger": {
-    "id": "pages\\Services.jsx -> gsap/dist/ScrollTrigger",
+  "pages\\Services.jsx -> gsap/ScrollTrigger": {
+    "id": "pages\\Services.jsx -> gsap/ScrollTrigger",
     "files": [
-      "static/chunks/_pages-dir-browser_node_modules_gsap_dist_ScrollTrigger_js.js"
+      "static/chunks/_pages-dir-browser_node_modules_gsap_ScrollTrigger_js.js"
     ]
   }
 }
