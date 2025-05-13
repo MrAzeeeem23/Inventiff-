@@ -35,8 +35,8 @@ export class BlogService {
   async getBlog() {
     try {
       return await this.database.listDocuments(
-        "67f6231300205660d8a5",
-        "67f623250002f05741f1",
+        process.env.NEXT_PUBLIC_APPWRITE_DATABASE_URI,
+        process.env.NEXT_PUBLIC_APPWRITE_COLLECTION_ID,
         []
       );
     } catch (error) {
@@ -52,7 +52,7 @@ export class BlogService {
     try {
       return await this.database.listDocuments(
         process.env.NEXT_PUBLIC_APPWRITE_DATABASE_URI,
-        "6813772c002926e109a0",
+        process.env.NEXT_PUBLIC_APPWRITE_SERVICE_COLLECTION_ID,
         []
       )
     } catch (error) {
@@ -65,7 +65,7 @@ export class BlogService {
     try {
       const currentService = await this.database.getDocument(
         process.env.NEXT_PUBLIC_APPWRITE_DATABASE_URI,
-        "6813772c002926e109a0",
+        process.env.NEXT_PUBLIC_APPWRITE_SERVICE_COLLECTION_ID,
         slug
       );
       return currentService;
@@ -81,7 +81,8 @@ export class BlogService {
     try{
       const response = await this.database.listDocuments(
         process.env.NEXT_PUBLIC_APPWRITE_DATABASE_URI,
-        "681c65800029fb8d051f"
+        process.env.NEXT_PUBLIC_APPWRITE_PRODUCT_COLLECTION_ID,
+        []
       );
       return response;
     } catch (error) {

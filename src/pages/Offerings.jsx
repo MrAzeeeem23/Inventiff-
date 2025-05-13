@@ -176,7 +176,7 @@ function Offerings() {
         <Container>
           <div className="absolute inset-0 bg-gradient-to-br from-white to-purple-100 dark:hidden"></div>
           <div className="absolute inset-0 bg-gradient-to-br from-black to-purple-900/30 hidden dark:block"></div>
-
+    
           <section
             ref={sectionRef}
             className="relative overflow-hidden backdrop-blur-sm"
