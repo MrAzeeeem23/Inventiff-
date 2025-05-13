@@ -1,9 +1,12 @@
-"use client"; // If this is a client component in app directory (Next.js 13+)
+"use client"; 
 
 import React, { useEffect, useRef, useState } from "react";
 import DarkModeToggle from "../utility/DarkButton";
 import Container from "../container/Container";
 import Link from "next/link";
+
+// logo path
+const Logo = "/assets/Inventiff_logo.jpg"
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -93,8 +96,8 @@ function Header() {
         <div className="transition-all duration-500 px-4 sm:px-6 lg:px-16 mx-auto flex justify-between items-center h-12">
           <a href="/" className="hover:text-gray-300">
             <img
-              src="https://fra.cloud.appwrite.io/v1/storage/buckets/672b862b0020f4a8c20d/files/6807ebf30008a3e84a81/view?project=672b796e002e34c4c4f0&mode=admin"
-              className="w-10 invert dark:invert-0"
+              src={Logo}
+              className="w-10 rounded-full invert dark:invert-0"
               alt="Logo"
             />
           </a>
