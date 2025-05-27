@@ -1,0 +1,111 @@
+[
+    {
+      "name": "Healthcare",
+      "slug": "healthcare",
+      "short_description": "Transforming care through intelligent analytics.",
+      "long_description": "We work with hospitals, clinics, and pharmaceutical companies to unlock insights that improve patient outcomes, optimize clinical operations, and accelerate innovation in healthcare delivery.",
+      "key_focus_areas": [
+        "Patient Risk Stratification",
+        "Clinical Trial Analytics",
+        "Claims & Operational Analytics",
+        "Predictive Health Monitoring"
+      ],
+      "seo_tags": [
+        "Healthcare Analytics",
+        "Clinical Insights",
+        "AI in Healthcare",
+        "Pharma Data Solutions"
+      ]
+    },
+    {
+      "name": "Financial Services",
+      "slug": "financial-services",
+      "short_description": "Enabling smarter, faster, and more secure financial decisions.",
+      "long_description": "Our solutions help banks, NBFCs, and fintech firms streamline operations, manage risks, and deliver personalized experiences through real-time analytics and predictive modeling.",
+      "key_focus_areas": [
+        "Credit Risk Scoring",
+        "Fraud Detection & Prevention",
+        "Customer Lifetime Value",
+        "Regulatory & Compliance Analytics"
+      ],
+      "seo_tags": [
+        "Financial Analytics",
+        "Risk Modeling",
+        "Fintech AI Solutions",
+        "Fraud Detection Systems"
+      ]
+    },
+    {
+      "name": "Manufacturing",
+      "slug": "manufacturing",
+      "short_description": "Driving efficiency and innovation with Industry 4.0 analytics.",
+      "long_description": "From predictive maintenance to process optimization, we help manufacturers use data to reduce downtime, improve quality, and increase throughput.",
+      "key_focus_areas": [
+        "Digital Twin and IoT Integration",
+        "Predictive Maintenance",
+        "Process Optimization",
+        "Supply Chain & Inventory Analytics"
+      ],
+      "seo_tags": [
+        "Smart Manufacturing",
+        "Industry 4.0",
+        "Predictive Maintenance",
+        "IoT Analytics"
+      ]
+    },
+    {
+      "name": "E-commerce & Retail",
+      "slug": "ecommerce-retail",
+      "short_description": "Personalized experiences powered by deep customer insights.",
+      "long_description": "We support online and offline retailers in optimizing the customer journey, improving conversions, and building loyalty using data science and machine learning.",
+      "key_focus_areas": [
+        "Customer Segmentation & Personalization",
+        "Demand Forecasting",
+        "Cart Abandonment Analysis",
+        "Product Recommendation Systems"
+      ],
+      "seo_tags": [
+        "E-commerce Analytics",
+        "Customer Behavior Insights",
+        "Retail AI",
+        "Sales Forecasting"
+      ]
+    },
+    {
+      "name": "Consulting & Professional Services",
+      "slug": "consulting-professional-services",
+      "short_description": "Augmenting advisory capabilities with data intelligence.",
+      "long_description": "We partner with consulting firms to deliver scalable analytics solutions that enhance client outcomes, automate reporting, and uncover new value opportunities.",
+      "key_focus_areas": [
+        "Strategic Analytics Advisory",
+        "BI Dashboard Development",
+        "NLP & Conversational AI",
+        "Custom Data Products"
+      ],
+      "seo_tags": [
+        "Consulting Analytics",
+        "BI Solutions",
+        "NLP for Services",
+        "AI in Consulting"
+      ]
+    },
+    {
+      "name": "Pharmaceuticals & Life Sciences",
+      "slug": "pharmaceuticals-life-sciences",
+      "short_description": "Accelerating research and outcomes through data.",
+      "long_description": "Our analytics solutions help pharma companies derive insights from clinical trials, real-world evidence, and supply chain data—driving innovation and regulatory efficiency.",
+      "key_focus_areas": [
+        "Drug Development Analytics",
+        "Clinical Trial Optimization",
+        "Pharmacovigilance",
+        "Sales & Marketing Analytics"
+      ],
+      "seo_tags": [
+        "Pharma Data Analytics",
+        "Clinical Research Insights",
+        "Drug Trial AI",
+        "Life Sciences BI"
+      ]
+    }
+  ]
+  

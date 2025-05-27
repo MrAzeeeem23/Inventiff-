@@ -11,8 +11,8 @@ const Logo = "/assets/Inventiff_logo.jpg"
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navItems = [
-    { name: "Industries", path: "/industries" },
-    { name: "Product", path: "products/Products" },
+    { name: "Industries", path: "/industries/Industries" },
+    { name: "Product", path: "/products/Products" },
     { name: "About", path: "/About" },
     { name: "Contact", path: "/Contact"}
   ];
@@ -104,13 +104,13 @@ function Header() {
 
           <nav className="hidden md:flex space-x-6 lg:space-x-8">
             {navItems.map((item, index) => (
-              <a
+              <Link
                 key={index}
                 href={item.path}
-                className="text-base lg:text-lg font-medium hover:text-gray-300 font-afacad"
+                className={`text-base lg:text-lg font-medium hover:text-gray-300 font-afacad`}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 

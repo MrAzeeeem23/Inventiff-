@@ -55,8 +55,8 @@ export default function ProductList() {
 
       <section className="min-h-screen bg-gradient-to-tr dark:from-black dark:to-purple-900/20 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold font-afacad mb-4 text-gray-900 dark:text-white">
-            Our Products & Solutions
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-afacad mb-4 text-gray-900 dark:text-white">
+            Products
           </h1>
           <p className="font-Poppins text-gray-600 dark:text-gray-300 mb-16 max-w-2xl">
             Innovative data analytics tools designed to transform your business intelligence
@@ -103,7 +103,7 @@ export default function ProductList() {
           onClick={closeProductModal}
         >
           <div 
-            className="backdrop-blur-3xl rounded-3xl max-w-2xl w-full mx-auto shadow-2xl relative"
+            className="backdrop-blur-3xl dark:bg-slate-950/20 rounded-3xl max-w-2xl w-full mx-auto shadow-2xl relative"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close Button */}

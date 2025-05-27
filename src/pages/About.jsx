@@ -33,6 +33,8 @@ We are a privately held company with a growing team of 11–50 employees, offeri
           content="Learn more about Inventiff Analytics, a boutique data science and analytics consulting company."
         />
       </Head>
+
+
       <section
         aria-labelledby="about-heading"
         className="min-h-max bg-gradient-to-tr from-white to-blue-900/20 dark:from-black dark:to-purple-900/20 py-10 px-4 sm:px-6 lg:px-8 flex justify-center"
@@ -53,7 +55,7 @@ We are a privately held company with a growing team of 11–50 employees, offeri
 
           {/* Description */}
           <div className="w-full flex justify-end mt-6 sm:mt-8">
-            <p className="text-md max-w-2xl text-black dark:text-white font-Poppins leading-relaxed">
+            <p className="text-md max-w-2xl text-black dark:text-white font-Poppins ">
               {aboutDescription}
             </p>
           </div>

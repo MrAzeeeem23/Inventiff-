@@ -157,7 +157,7 @@ export default function AnalyticsServices() {
               <h2 
                 id="analytics-services-heading"
                 ref={titleRef} 
-                className="text-3xl md:text-4xl xl:text-5xl font-afacad font-bold text-black dark:text-white xl:w-1/4 relative"
+                className="text-3xl md:text-5xl font-afacad font-bold text-black dark:text-white xl:w-1/4 relative"
               >
                 Advanced Analytics Services
                 <span className="absolute -bottom-3 left-0 w-16 h-1 bg-purple-400/70"></span>
