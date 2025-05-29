@@ -2,9 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/industries/Industries": "pages/industries/Industries.js",
-  "/industries/[slug]": "pages/industries/[slug].js",
-  "/products/Products": "pages/products/Products.js",
   "/About": "pages/About.js"
 }

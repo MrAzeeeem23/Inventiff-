@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 class Pixel {
   constructor(canvas, context, x, y, color, speed, delay) {
@@ -95,9 +95,6 @@ function getEffectiveSpeed(value, reducedMotion) {
   }
 }
 
-/**
- *  You can change/expand these as you like.
- */
 const VARIANTS = {
   default: {
     activeColor: null,
@@ -142,16 +139,25 @@ export default function PixelCard({
   const canvasRef = useRef(null);
   const pixelsRef = useRef([]);
   const animationRef = useRef(null);
-  const timePreviousRef = useRef(performance.now());
-  const reducedMotion = useRef(
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  ).current;
+  const timePreviousRef = useRef(null);
+  const [isClient, setIsClient] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
 
   const variantCfg = VARIANTS[variant] || VARIANTS.default;
   const finalGap = gap ?? variantCfg.gap;
   const finalSpeed = speed ?? variantCfg.speed;
   const finalColors = colors ?? variantCfg.colors;
   const finalNoFocus = noFocus ?? variantCfg.noFocus;
+
+  useEffect(() => {
+    setIsClient(true);
+    if (typeof window !== "undefined") {
+      setReducedMotion(
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      );
+      timePreviousRef.current = performance.now();
+    }
+  }, []);
 
   const initPixels = () => {
     if (!containerRef.current || !canvasRef.current) return;
@@ -168,10 +174,10 @@ export default function PixelCard({
 
     const colorsArray = finalColors.split(",");
     const pxs = [];
+
     for (let x = 0; x < width; x += parseInt(finalGap, 10)) {
       for (let y = 0; y < height; y += parseInt(finalGap, 10)) {
-        const color =
-          colorsArray[Math.floor(Math.random() * colorsArray.length)];
+        const color = colorsArray[Math.floor(Math.random() * colorsArray.length)];
 
         const dx = x - width / 2;
         const dy = y - height / 2;
@@ -191,6 +197,7 @@ export default function PixelCard({
         );
       }
     }
+
     pixelsRef.current = pxs;
   };
 
@@ -198,7 +205,7 @@ export default function PixelCard({
     animationRef.current = requestAnimationFrame(() => doAnimate(fnName));
     const timeNow = performance.now();
     const timePassed = timeNow - timePreviousRef.current;
-    const timeInterval = 1000 / 60; // ~60 FPS
+    const timeInterval = 1000 / 60;
 
     if (timePassed < timeInterval) return;
     timePreviousRef.current = timeNow - (timePassed % timeInterval);
@@ -216,6 +223,7 @@ export default function PixelCard({
         allIdle = false;
       }
     }
+
     if (allIdle) {
       cancelAnimationFrame(animationRef.current);
     }
@@ -238,36 +246,35 @@ export default function PixelCard({
   };
 
   useEffect(() => {
+    if (!isClient) return;
+
     initPixels();
+
     const observer = new ResizeObserver(() => {
       initPixels();
     });
+
     if (containerRef.current) {
       observer.observe(containerRef.current);
     }
+
     return () => {
       observer.disconnect();
       cancelAnimationFrame(animationRef.current);
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [finalGap, finalSpeed, finalColors, finalNoFocus]);
+  }, [finalGap, finalSpeed, finalColors, finalNoFocus, isClient]);
 
   return (
     <div
       ref={containerRef}
       className={`h-[320px] w-[300px] relative overflow-hidden grid place-items-center aspect-[4/5] border border-[#27272a] rounded-[25px] isolate transition-colors duration-200 ease-[cubic-bezier(0.5,1,0.89,1)] select-none ${className}`}
-
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-
       onFocus={finalNoFocus ? undefined : onFocus}
       onBlur={finalNoFocus ? undefined : onBlur}
       tabIndex={finalNoFocus ? -1 : 0}
     >
-      <canvas
-        className="w-full h-full block"
-        ref={canvasRef}
-      />
+      <canvas className="w-full h-full block" ref={canvasRef} />
       {children}
     </div>
   );

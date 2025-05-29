@@ -23,7 +23,7 @@ function Footer() {
           </a>
         </nav>
         <div className="mt-8 w-full border-t border-gray-200 dark:border-gray-800 pt-4 text-sm text-gray-500 dark:text-gray-400">
-          &copy; {new Date().getFullYear()} Inventiff Analytics. All rights reserved.
+          &copy {new Date().getFullYear()} Inventiff Analytics. All rights reserved.
         </div>
       </div>
     </footer>
