@@ -1,4 +1,5 @@
 import React from "react";
+import ContactCard from "../ContactCard";
 import data from "./data";
 import IndustryCard from "./IndustryCard";
 
@@ -23,6 +24,9 @@ function Industries() {
           {data.map((industry) => (
             <IndustryCard key={industry.slug} industry={industry} />
           ))}
+        </div>
+        <div>
+          <ContactCard />
         </div>
       </section>
       <style jsx>{`

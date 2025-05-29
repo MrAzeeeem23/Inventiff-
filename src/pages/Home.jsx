@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import ShinyText from "../animations/ShinyText";
 import Dock from "../animations/Dock";
 import { Newspaper, Sprout, Users, Cog } from "lucide-react";
+import Beams from "@/animations/Beams";
 
 function Hero() {
   const headingRef = useRef(null);
@@ -64,8 +65,20 @@ function Hero() {
         muted
         playsInline
       />
+      {/* <div style={{ width: "100%"}} className="absolute top-0 left-0 w-full h-full object-cover">
+        <Beams
+          beamWidth={2}
+          beamHeight={15}
+          beamNumber={12}
+          lightColor="#ffffff"
+          speed={4}
+          noiseIntensity={1}
+          scale={0.2}
+          rotation={30}
+        />
+      </div> */}
 
-      <div className="absolute backdrop-blur-sm inset-0 bg-black/40 dark:bg-black/50 z-0" />
+      <div className="absolute backdrop-blur-[2px] inset-0 bg-black/40 dark:bg-black/5 z-0" />
 
       <div className="relative z-10 h-full flex flex-col justify-center mx-8 md:mx-16">
         <div ref={headingRef}>
@@ -96,7 +109,7 @@ function Hero() {
         />
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-b from-transparent to-white/80 dark:to-black pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-b from-transparent to-white/70 dark:to-black pointer-events-none"></div>
     </section>
   );
 }

@@ -1,13 +1,10 @@
 import React from "react";
-import Globe from "@/animations/Globe";
 import Values from "./about/Values";
-import WhoWreAre from "./about/WhoWreAre";
 import Interactive3DGraph from "@/animations/Interactive3DGraph";
 import Head from "next/head";
-import Why from "./about/Why";
+import ContactCard from "./ContactCard";
 
 function About() {
-  // Dynamic content
   const companyName = "Inventiff Analytics";
   const aboutTitle = "About";
   const whoWeAreTitle = "Who We Are";
@@ -23,7 +20,6 @@ We are a privately held company with a growing team of 11–50 employees, offeri
 
   return (
     <>
-      {/* Main About Section */}
       <Head>
         <title>
           About Inventiff Analytics | Data Science & Analytics Consulting
@@ -34,13 +30,11 @@ We are a privately held company with a growing team of 11–50 employees, offeri
         />
       </Head>
 
-
       <section
         aria-labelledby="about-heading"
         className="min-h-max bg-gradient-to-tr from-white to-blue-900/20 dark:from-black dark:to-purple-900/20 py-10 px-4 sm:px-6 lg:px-8 flex justify-center"
       >
-        <div className="w-full max-w-6xl grid grid-rows-2 mt-12">
-          {/* Heading */}
+        <div className="w-full max-w-6xl flex flex-col gap-24 mt-12">
           <div>
             <h1
               id="about-heading"
@@ -53,18 +47,17 @@ We are a privately held company with a growing team of 11–50 employees, offeri
             </h2>
           </div>
 
-          {/* Description */}
-          <div className="w-full flex justify-end mt-6 sm:mt-8">
-            <p className="text-md max-w-2xl text-black dark:text-white font-Poppins ">
+          <div className="w-full flex justify-end">
+            <p className="text-md max-w-2xl text-black dark:text-white font-Poppins">
               {aboutDescription}
             </p>
           </div>
 
-          {/* Who We Are Section */}
-          <div className="w-full mt-32 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16">
             <div>
               <picture>
                 <img
+                  loading="lazy"
                   className="w-full h-auto rounded-lg shadow-lg"
                   src="https://images.pexels.com/photos/3780104/pexels-photo-3780104.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="Team collaboration at Inventiff Analytics"
@@ -81,8 +74,7 @@ We are a privately held company with a growing team of 11–50 employees, offeri
             </article>
           </div>
 
-          {/* Globe Animation */}
-          <div className="flex justify-center items-center my-28">
+          <div className="flex justify-center items-center">
             <Interactive3DGraph
               nodeColor="#ffffff"
               edgeColor="#ffffff"
@@ -90,11 +82,9 @@ We are a privately held company with a growing team of 11–50 employees, offeri
             />
           </div>
 
-          {/* Values Section */}
           <Values />
 
-          {/* Why Inventiff Section */}
-          <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16">
             <article>
               <h3 className="text-3xl sm:text-4xl font-bold dark:text-white font-afacad">
                 {whyInventiffTitle}
@@ -106,6 +96,7 @@ We are a privately held company with a growing team of 11–50 employees, offeri
             <div>
               <picture>
                 <img
+                  loading="lazy"
                   className="w-full h-auto rounded-lg shadow-md"
                   src="https://images.pexels.com/photos/264594/pexels-photo-264594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                   alt="Data-driven decision making illustration"
@@ -113,6 +104,7 @@ We are a privately held company with a growing team of 11–50 employees, offeri
               </picture>
             </div>
           </div>
+          <ContactCard />
         </div>
       </section>
     </>

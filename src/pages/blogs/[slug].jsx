@@ -62,10 +62,21 @@ export default function BlogDetail() {
       <div className="min-h-screen bg-gradient-to-tr dark:from-black dark:to-purple-900/20 py-10 px-4 sm:px-6 lg:px-8 flex items-start justify-center">
         <div
           className={`
-            w-full max-w-4xl mt-12 transition-all duration-700 ease-out
-            ${showContent ? "blur-0 opacity-100" : "blur-sm opacity-0"}
+          w-full max-w-4xl mt-12 transition-all duration-700 ease-out
+          ${showContent ? "blur-0 opacity-100" : "blur-sm opacity-0"}
           `}
         >
+          <div className="relative">
+            <img
+              src={blog.thumbnail_URL}
+              alt={blog.Title}
+              className="relative object-cover my-7 rounded-2xl w-full h-36"
+            />
+            <h1 className="absolute inset-0 flex items-center justify-center text-3xl sm:text-4xl font-bold font-afacad dark:bg-black/40 text-white leading-snug text-center px-4 backdrop-blur-sm rounded-2xl">
+              {blog.Title}
+            </h1>
+          </div>
+
           <h2 className="text-gray-500 dark:text-gray-400 uppercase font-michroma_regular text-sm mb-2">
             {new Date(blog.$createdAt).toLocaleDateString("en-US", {
               year: "numeric",
@@ -74,9 +85,9 @@ export default function BlogDetail() {
             })}
           </h2>
 
-          <h1 className="text-3xl sm:text-4xl font-bold font-afacad text-black dark:text-white mb-6 leading-snug">
+          {/* <h1 className="text-3xl sm:text-4xl font-bold font-afacad text-black dark:text-white mb-6 leading-snug">
             {blog.Title}
-          </h1>
+          </h1> */}
 
           <div className="prose prose-lg max-w-none dark:prose-invert font-poppins text-gray-800 dark:text-gray-300 mb-12">
             <ReactMarkdown
@@ -139,16 +150,16 @@ export default function BlogDetail() {
           <p className="text-sm font-medium text-gray-700 dark:text-gray-400 pb-28">
             — {blog.Author}
           </p>
-        <div className="text-center">
-          <Link href="/blogs/AllBlogs" passHref>
-            <ShinyText
-              text="More Blogs"
-              disabled={false}
-              speed={2}
-              className="text-2xl mb-4 drop-shadow-md font-afacad border px-4 rounded-full"
-            />
-          </Link>
-        </div>
+          <div className="text-center">
+            <Link href="/blogs/AllBlogs" passHref>
+              <ShinyText
+                text="More Blogs"
+                disabled={false}
+                speed={2}
+                className="text-xl bg-black mb-4 drop-shadow-md font-afacad border-gray-300 border px-7 py-3 rounded-full"
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </>

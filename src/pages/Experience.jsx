@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 
 // Dynamically import CountUp with no SSR
 const CountUp = dynamic(() => import("../animations/Countup"), {
-  ssr: false
+  ssr: false,
 });
 
 // Data for experience metrics
@@ -30,16 +30,14 @@ function Experience(z) {
 
   useEffect(() => {
     const initGSAP = async () => {
-      
       const gsapModule = await import("gsap");
       const gsap = gsapModule.default;
-      
+
       const ScrollTriggerModule = await import("gsap/dist/ScrollTrigger");
       const ScrollTrigger = ScrollTriggerModule.ScrollTrigger;
-      
+
       gsap.registerPlugin(ScrollTrigger);
-      
-      
+
       if (headingRef.current) {
         gsap.fromTo(
           headingRef.current,
@@ -81,9 +79,7 @@ function Experience(z) {
       });
     };
 
-
-    if (typeof window !== 'undefined') {
-
+    if (typeof window !== "undefined") {
       setTimeout(() => {
         initGSAP();
       }, 100);
@@ -94,17 +90,29 @@ function Experience(z) {
     <>
       <Head>
         <title>Our Team Experience | Inventiff Analytics</title>
-        <meta name="description" content="Inventiff Analytics brings decades of experience in data analytics, healthcare, manufacturing, and financial services to solve your most complex business challenges." />
-        <meta name="keywords" content="data analytics, healthcare experience, financial services expertise, manufacturing analytics" />
-        <meta property="og:title" content="Our Team Experience | Inventiff Analytics" />
-        <meta property="og:description" content="20+ years in Data Analytics, 30+ years in Healthcare, and 10+ years in Manufacturing & Financial Services." />
+        <meta
+          name="description"
+          content="Inventiff Analytics brings decades of experience in data analytics, healthcare, manufacturing, and financial services to solve your most complex business challenges."
+        />
+        <meta
+          name="keywords"
+          content="data analytics, healthcare experience, financial services expertise, manufacturing analytics"
+        />
+        <meta
+          property="og:title"
+          content="Our Team Experience | Inventiff Analytics"
+        />
+        <meta
+          property="og:description"
+          content="20+ years in Data Analytics, 30+ years in Healthcare, and 10+ years in Manufacturing & Financial Services."
+        />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
       </Head>
       <Container>
-        <section 
+        <section
           id="Experience"
-          className="w-full px-6 py-16 text-gray-800 dark:text-gray-100" 
+          className="w-full px-6 py-16 text-gray-800 dark:text-gray-100"
           aria-labelledby="experience-heading"
         >
           <div className="mx-auto">
@@ -130,6 +138,9 @@ function Experience(z) {
                     duration={1}
                     className="text-5xl font-bebas_neue_r dark:text-white/50 text-black/90 mb-4"
                   />
+                  <span className="text-5xl ml-1 font-bebas_neue_r dark:text-white/50 text-black/90 mb-4">
+                    +
+                  </span>
                   <p className="text-lg font-Poppins text-gray-700 dark:text-gray-200">
                     {item.label}
                   </p>

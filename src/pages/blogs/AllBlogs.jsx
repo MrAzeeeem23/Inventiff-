@@ -36,7 +36,7 @@ function AllBlogs() {
   return (
     <section className="min-h-screen bg-gradient-to-tr dark:from-black dark:to-purple-900/20 py-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mt-12 mb-8">
-        <h1 className="text-5xl font-bold font-afacad text-black dark:text-white">
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-afacad text-black dark:text-white">
           All Blogs
         </h1>
       </div>
@@ -44,7 +44,7 @@ function AllBlogs() {
       {loading && <Loader />}
       {error && <p className="text-center text-red-500">{error}</p>}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4 sm:px-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 sm:px-6">
         {posts.map((post, index) => (
           <div
             key={post.$id}
@@ -58,7 +58,7 @@ function AllBlogs() {
           >
             <div className="aspect-square w-full overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/25626446/pexels-photo-25626446/free-photo-of-black-and-white-geometric-representation-of-data.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src={post.thumbnail_URL}
                 alt="Blog cover"
                 className="object-cover w-full h-full hover:scale-105 transition-all"
               />

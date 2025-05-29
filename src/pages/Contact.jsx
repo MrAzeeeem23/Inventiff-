@@ -183,6 +183,7 @@ export default function ContactForm() {
       >
         <Container>
           <div className="w-full max-w-7xl mx-2 flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16">
+            
             <div className="w-full lg:w-2/5">
               <h1
                 id="contact-heading"
@@ -206,7 +207,7 @@ export default function ContactForm() {
                   <div>
                     <h3 className="font-Poppins">Email Us</h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      <a href="mailto:info@yourcompany.com" className="hover:underline">
+                      <a href="mailto:info@Inventff.com" className="hover:underline">
                         info@Inventff.com
                       </a>
                     </p>
@@ -222,7 +223,7 @@ export default function ContactForm() {
                   <div>
                     <h3 className="font-Poppins">Call Us</h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      <a href="tel:+15551234567" className="hover:underline">
+                      <a href="tel:+918862097207" className="hover:underline">
                         +91 8862097207
                       </a>
                     </p>
@@ -249,7 +250,9 @@ export default function ContactForm() {
             </div>
 
             <div className="w-full lg:w-3/5">
-              <div className="w-full backdrop-blur-2xl bg-white/5 dark:bg-black/10 border border-gray-200 dark:border-gray-800 py-8 md:py-10 px-6 md:px-8 rounded-2xl shadow-lg">
+              <div className="relative w-full backdrop-blur-2xl bg-white/5 dark:bg-black/10 border border-gray-200 dark:border-gray-800 py-8 md:py-10 px-6 md:px-8 rounded-2xl shadow-lg">
+        <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-700/25 bg-[size:40px_40px] opacity-20 dark:opacity-65 pointer-events-none -z-10"></div>
+                
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
@@ -276,7 +279,7 @@ export default function ContactForm() {
                           ? "border-red-500 focus:ring-2 focus:ring-red-500" 
                           : "border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       } transition`}
-                      placeholder="Azeem"
+                      placeholder="Your Name"
                       aria-required="true"
                       aria-invalid={!!formErrors.name}
                       aria-describedby={formErrors.name ? "name-error" : undefined}
@@ -311,7 +314,7 @@ export default function ContactForm() {
                           ? "border-red-500 focus:ring-2 focus:ring-red-500" 
                           : "border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       } transition`}
-                      placeholder="azeem@email.com"
+                      placeholder="example@email.com"
                       aria-required="true"
                       aria-invalid={!!formErrors.email}
                       aria-describedby={formErrors.email ? "email-error" : undefined}

@@ -4,5 +4,10 @@
 
 html {
     scroll-behavior: smooth;
-  }
+}
+
+*::selection{
+  color: rgb(202, 202, 202);
+  background-color: rgb(0, 0, 0);
+}
   

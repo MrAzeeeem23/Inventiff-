@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
-import Head from "next/head";
-import Container from "../components/container/Container";
+import { ChevronRight, Target, BarChart3, Cog } from "lucide-react";
+import Container from "@/components/container/Container";
 
 // Data for offerings
 const offeringsData = [
@@ -14,6 +14,7 @@ const offeringsData = [
       "Milestone tracking and deliverable-focused",
       "Best suited for projects with specific timelines and budgets",
     ],
+    icon: Target,
   },
   {
     title: "Analytics Services",
@@ -25,6 +26,7 @@ const offeringsData = [
       "Fast execution due to domain expertise",
       "Flexible engagement models",
     ],
+    icon: BarChart3,
   },
   {
     title: "Operationalizing Analytics",
@@ -36,6 +38,7 @@ const offeringsData = [
       "Deployment of production-ready models",
       "Ideal for teams with existing Data Science workflows",
     ],
+    icon: Cog,
   },
 ];
 
@@ -150,89 +153,96 @@ function Offerings() {
 
   return (
     <>
-      <Head>
-        <title>Data Science Offerings | Inventiff Analytics</title>
-        <meta
-          name="description"
-          content="Leverage your data with our flexible, scalable solutions: Project-Based Analytics, Analytics Services, and Operationalizing Analytics."
-        />
-        <meta
-          name="keywords"
-          content="data science, analytics services, data analytics solutions, project-based analytics, operationalizing analytics"
-        />
-        <meta
-          property="og:title"
-          content="Data Science Offerings | Inventiff Analytics"
-        />
-        <meta
-          property="og:description"
-          content="Comprehensive data science solutions to transform your business data into actionable insights."
-        />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-      </Head>
-
       <section id="Offerings" className="relative">
         <Container>
-          <div className="absolute inset-0 bg-gradient-to-br from-white to-purple-100 dark:hidden"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-black to-purple-900/30 hidden dark:block"></div>
-    
-          <section
-            ref={sectionRef}
-            className="relative overflow-hidden backdrop-blur-sm"
-            aria-labelledby="offerings-heading"
-          >
-            <div className="flex flex-col md:flex-row md:h-screen">
-              {/* Left */}
-              <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center transition">
-                <h1
-                  id="offerings-heading"
-                  className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-4 md:mb-6 drop-shadow-lg font-afacad transition-all"
-                >
-                  Data Science Offerings
-                </h1>
-                <p className="text-base font-Poppins md:text-lg text-gray-700 dark:text-gray-300">
-                  Leverage your data to make smarter, faster business decisions.
-                  We offer flexible, scalable solutions tailored to your data
-                  science journey.
-                </p>
-              </div>
+          <div className="px-4">
+            <div className="absolute inset-0 bg-gradient-to-br from-white to-purple-100 dark:hidden"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-black to-purple-900/30 hidden dark:block"></div>
 
-              {/* Right (scrolling cards) */}
-              <div className="w-full md:w-1/2">
-                <div
-                  ref={cardsRef}
-                  className="flex flex-col gap-6 p-6 pb-10"
-                  style={{
-                    willChange: isMobile ? "auto" : "transform",
-                    backfaceVisibility: "hidden",
-                    transform: "translateZ(0)",
-                  }}
-                >
-                  {offeringsData.map((item, index) => (
-                    <div
-                      key={index}
-                      className="relative bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl rounded-2xl shadow-xl hover:scale-105 transition-all p-6 text-left font-Poppins overflow-hidden"
-                    >
-                      {/* Decorative Rotating Chart */}
+            <section
+              ref={sectionRef}
+              className="relative overflow-hidden backdrop-blur-sm"
+              aria-labelledby="offerings-heading"
+            >
+              <div className="flex flex-col md:flex-row md:h-screen">
+                {/* Left */}
+                <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center transition">
+                  <h1
+                    id="offerings-heading"
+                    className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-4 md:mb-6 drop-shadow-lg font-afacad transition-all"
+                  >
+                    Data Science Offerings
+                  </h1>
+                  <p className="text-base font-Poppins md:text-lg text-gray-700 dark:text-gray-300">
+                    Leverage your data to make smarter, faster business
+                    decisions. We offer flexible, scalable solutions tailored to
+                    your data science journey.
+                  </p>
+                </div>
 
-                      <h2 className="text-3xl font-afacad text-black dark:text-white mb-2">
-                        {item.title}
-                      </h2>
-                      <p className="text-gray-700 dark:text-gray-300 mb-4 font-Poppins">
-                        {item.description}
-                      </p>
-                      <ul className="list-disc list-inside text-gray-600 font-Poppins dark:text-gray-400 space-y-1">
-                        {item.points.map((point, i) => (
-                          <li key={i}>{point}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+                {/* Right (scrolling cards) - MODERNIZED */}
+                <div className="w-full md:w-1/2">
+                  <div
+                    ref={cardsRef}
+                    className="flex flex-col gap-6 p-6 pb-10"
+                    style={{
+                      willChange: isMobile ? "auto" : "transform",
+                      backfaceVisibility: "hidden",
+                      transform: "translateZ(0)",
+                    }}
+                  >
+                    {offeringsData.map((item, index) => {
+                      const IconComponent = item.icon;
+                      return (
+                        <div
+                          key={index}
+                          className="group relative overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] p-8 text-left font-Poppins border border-white/20 dark:border-gray-700/30"
+                        >
+                          {/* Animated Background Effect */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+
+                          {/* Content */}
+                          <div className="relative z-10">
+                            {/* Icon and Title Row */}
+                            <div className="flex items-center gap-4 mb-4">
+                              <div className="flex p-3 rounded-2xl bg-gray-100 dark:bg-gray-700 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                <IconComponent className="w-6 h-6 text-gray-600 dark:text-gray-300" />
+                              </div>
+                              <h2 className="text-2xl md:text-3xl font-bold font-afacad text-black dark:text-white transition-all duration-300">
+                                {item.title}
+                              </h2>
+                            </div>
+
+                            {/* Description */}
+                            <p className="text-gray-700 dark:text-gray-300 mb-6 font-Poppins leading-relaxed text-base">
+                              {item.description}
+                            </p>
+
+                            {/* Points with Modern Styling */}
+                            <ul className="space-y-3">
+                              {item.points.map((point, i) => (
+                                <li
+                                  key={i}
+                                  className="flex items-start gap-3 text-gray-600 font-Poppins dark:text-gray-400 group-hover:text-gray-700 dark:group-hover:text-gray-300 transition-colors duration-300"
+                                >
+                                  <div className="flex-shrink-0 mt-1">
+                                    <ChevronRight className="w-4 h-4 text-gray-500 dark:text-gray-400 transition-colors duration-300" />
+                                  </div>
+                                  <span className="text-sm md:text-base">
+                                    {point}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </Container>
       </section>
     </>
