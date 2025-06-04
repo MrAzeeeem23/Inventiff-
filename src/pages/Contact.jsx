@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Container from "../components/container/Container";
 import { Toaster, toast } from "react-hot-toast";
-import {Facebook, Instagram, Linkedin, Twitter} from "lucide-react"
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 export const metadata = {
   title: "Contact Us | Inventiff Analytics - Get in Touch With Our Team",
@@ -55,81 +55,79 @@ export default function ContactForm() {
   const contactPageSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    "name": "Contact Inventiff Analytics",
-    "description": "Contact form for Inventiff Analytics. Reach out to our team with any questions or inquiries.",
-    "url": "https://Inventiff.com/contact",
-    "contactPoint": {
+    name: "Contact Inventiff Analytics",
+    description:
+      "Contact form for Inventiff Analytics. Reach out to our team with any questions or inquiries.",
+    url: "https://Inventiff.com/contact",
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+91 8862097207",
-      "contactType": "customer service",
-      "availableLanguage": ["English"],
-      "areaServed": ["US", "CA", "UK", "AU"],
-      "hoursAvailable": {
+      telephone: "+91 8862097207",
+      contactType: "customer service",
+      availableLanguage: ["English"],
+      areaServed: ["US", "CA", "UK", "AU"],
+      hoursAvailable: {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday", "Tuesday", "Wednesday", 
-          "Thursday", "Friday"
-        ],
-        "opens": "09:00",
-        "closes": "17:00"
-      }
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "17:00",
+      },
     },
-    "mainEntity": {
+    mainEntity: {
       "@type": "Organization",
-      "name": "Inventiff Analytics",
-      "logo": "https://Inventiff.com/logo.png",
-      "sameAs": [
+      name: "Inventiff Analytics",
+      logo: "https://Inventiff.com/logo.png",
+      sameAs: [
         "https://www.facebook.com/yourcompany",
         "https://www.twitter.com/yourcompany",
         "https://www.linkedin.com/company/yourcompany",
-        "https://www.instagram.com/yourcompany"
-      ]
-    }
+        "https://www.instagram.com/yourcompany",
+      ],
+    },
   };
 
   useEffect(() => {
     // Only prevent automatic scrolling when component loads
-    if (typeof window !== 'undefined') {
-      window.history.scrollRestoration = 'manual';
+    if (typeof window !== "undefined") {
+      window.history.scrollRestoration = "manual";
     }
-    
+
     return () => {
       // Reset scroll restoration behavior when component unmounts
-      if (typeof window !== 'undefined') {
-        window.history.scrollRestoration = 'auto';
+      if (typeof window !== "undefined") {
+        window.history.scrollRestoration = "auto";
       }
     };
   }, []);
 
   const validateForm = () => {
     const errors = {};
-    
+
     if (!formData.name.trim()) {
       errors.name = "Name is required";
     }
-    
+
     if (!formData.email.trim()) {
       errors.email = "Email is required";
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       errors.email = "Please enter a valid email address";
     }
-    
+
     if (!formData.message.trim()) {
       errors.message = "Message is required";
     } else if (formData.message.trim().length < 10) {
       errors.message = "Message must be at least 10 characters";
     }
-    
+
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
     if (formErrors[name]) {
-      setFormErrors(prev => ({ ...prev, [name]: undefined }));
+      setFormErrors((prev) => ({ ...prev, [name]: undefined }));
     }
   };
 
@@ -148,7 +146,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -177,13 +175,12 @@ export default function ContactForm() {
 
   return (
     <>
-      <section 
+      <section
         className="bg-white dark:bg-black text-black dark:text-white py-16 md:py-24 px-4 min-h-screen flex justify-center items-center"
         aria-labelledby="contact-heading"
       >
         <Container>
           <div className="w-full max-w-7xl mx-2 flex flex-col lg:flex-row lg:items-start gap-10 lg:gap-16">
-            
             <div className="w-full lg:w-2/5">
               <h1
                 id="contact-heading"
@@ -191,33 +188,58 @@ export default function ContactForm() {
               >
                 We'd Love To Hear From You
               </h1>
-              
+
               <p className="text-base md:text-lg mb-8 text-gray-700 dark:text-gray-300">
-                Have questions or feedback? Our team is ready to assist. 
-                Fill out the form, and we'll get back to you within 24 hours.
+                Have questions or feedback? Our team is ready to assist. Fill
+                out the form, and we'll get back to you within 24 hours.
               </p>
-              
+
               <div className="space-y-6 mb-10">
                 <div className="flex items-start">
                   <div className="mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      />
                     </svg>
                   </div>
                   <div>
                     <h3 className="font-Poppins">Email Us</h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      <a href="mailto:info@Inventff.com" className="hover:underline">
+                      <a
+                        href="mailto:info@Inventff.com"
+                        className="hover:underline"
+                      >
                         info@Inventff.com
                       </a>
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                      />
                     </svg>
                   </div>
                   <div>
@@ -229,19 +251,37 @@ export default function ContactForm() {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
                     </svg>
                   </div>
                   <div>
                     <h3 className="font-Poppins">Visit Us</h3>
                     <address className="text-gray-600 dark:text-gray-400 not-italic">
-                      123 Business Avenue<br />
-                      Suite 200<br />
+                      123 Business Avenue
+                      <br />
+                      Suite 200
+                      <br />
                       Pune, Maharastra
                     </address>
                   </div>
@@ -251,8 +291,8 @@ export default function ContactForm() {
 
             <div className="w-full lg:w-3/5">
               <div className="relative w-full backdrop-blur-2xl bg-white/5 dark:bg-black/10 border border-gray-200 dark:border-gray-800 py-8 md:py-10 px-6 md:px-8 rounded-2xl shadow-lg">
-        <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-700/25 bg-[size:40px_40px] opacity-20 dark:opacity-65 pointer-events-none -z-10"></div>
-                
+                <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-700/25 bg-[size:40px_40px] opacity-20 dark:opacity-65 pointer-events-none -z-10"></div>
+
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
@@ -275,14 +315,16 @@ export default function ContactForm() {
                       value={formData.name}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl outline-none bg-gray-50 dark:bg-gray-900 dark:text-white border ${
-                        formErrors.name 
-                          ? "border-red-500 focus:ring-2 focus:ring-red-500" 
+                        formErrors.name
+                          ? "border-red-500 focus:ring-2 focus:ring-red-500"
                           : "border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       } transition`}
                       placeholder="Your Name"
                       aria-required="true"
                       aria-invalid={!!formErrors.name}
-                      aria-describedby={formErrors.name ? "name-error" : undefined}
+                      aria-describedby={
+                        formErrors.name ? "name-error" : undefined
+                      }
                     />
                     {formErrors.name && (
                       <p
@@ -310,14 +352,16 @@ export default function ContactForm() {
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl outline-none bg-gray-50 dark:bg-gray-900 dark:text-white border ${
-                        formErrors.email 
-                          ? "border-red-500 focus:ring-2 focus:ring-red-500" 
+                        formErrors.email
+                          ? "border-red-500 focus:ring-2 focus:ring-red-500"
                           : "border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       } transition`}
                       placeholder="example@email.com"
                       aria-required="true"
                       aria-invalid={!!formErrors.email}
-                      aria-describedby={formErrors.email ? "email-error" : undefined}
+                      aria-describedby={
+                        formErrors.email ? "email-error" : undefined
+                      }
                     />
                     {formErrors.email && (
                       <p
@@ -364,14 +408,16 @@ export default function ContactForm() {
                       value={formData.message}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl outline-none bg-gray-50 dark:bg-gray-900 dark:text-white border ${
-                        formErrors.message 
-                          ? "border-red-500 focus:ring-2 focus:ring-red-500" 
+                        formErrors.message
+                          ? "border-red-500 focus:ring-2 focus:ring-red-500"
                           : "border-gray-300 dark:border-gray-700 focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                       } transition`}
                       placeholder="How can we help you?"
                       aria-required="true"
                       aria-invalid={!!formErrors.message}
-                      aria-describedby={formErrors.message ? "message-error" : undefined}
+                      aria-describedby={
+                        formErrors.message ? "message-error" : undefined
+                      }
                     ></textarea>
                     {formErrors.message && (
                       <p
@@ -392,9 +438,25 @@ export default function ContactForm() {
                     >
                       {isSubmitting ? (
                         <span className="flex items-center justify-center">
-                          <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white dark:text-black" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          <svg
+                            className="animate-spin -ml-1 mr-3 h-5 w-5 text-white dark:text-black"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <circle
+                              className="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              strokeWidth="4"
+                            ></circle>
+                            <path
+                              className="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                            ></path>
                           </svg>
                           Sending...
                         </span>
@@ -407,14 +469,16 @@ export default function ContactForm() {
               </div>
             </div>
           </div>
-          
+
           <div className="mt-16 text-center">
             <h2 className="text-xl md:text-2xl font-afacad mb-6">Follow Us</h2>
             <div className="flex justify-center space-x-4">
-              {[{name: "facebook", icon: <Facebook strokeWidth={1} />},
-               {name: "X", icon: <Twitter strokeWidth={1} />},
-               {name: "instagram", icon: <Instagram strokeWidth={1} />},
-               {name: "linkrfin", icon: <Linkedin strokeWidth={1} />}].map((social) => (
+              {[
+                { name: "facebook", icon: <Facebook strokeWidth={1} /> },
+                { name: "X", icon: <Twitter strokeWidth={1} /> },
+                { name: "instagram", icon: <Instagram strokeWidth={1} /> },
+                { name: "linkrfin", icon: <Linkedin strokeWidth={1} /> },
+              ].map((social) => (
                 <a
                   key={social}
                   href={`https://${social.name}.com/Inventiff`}
@@ -431,25 +495,25 @@ export default function ContactForm() {
           </div>
         </Container>
       </section>
-      
-      <Toaster 
+
+      <Toaster
         position="bottom-center"
         toastOptions={{
           duration: 5000,
           style: {
-            background: '#333',
-            color: '#fff',
+            background: "#333",
+            color: "#fff",
           },
           success: {
             iconTheme: {
-              primary: '#10B981',
-              secondary: '#FFFFFF',
+              primary: "#10B981",
+              secondary: "#FFFFFF",
             },
           },
           error: {
             iconTheme: {
-              primary: '#EF4444',
-              secondary: '#FFFFFF',
+              primary: "#EF4444",
+              secondary: "#FFFFFF",
             },
           },
         }}

@@ -1,3 +1,4 @@
+import ChatBot from '@/components/chatBot/ChatBot'
 import React from 'react'
 import Blog from './Blogs'
 import ContactForm from './Contact'
@@ -10,6 +11,7 @@ function Layout() {
   return (
     <>
       <Home />
+      <ChatBot />
       <Offerings />
       <Experience />
       <Blog />

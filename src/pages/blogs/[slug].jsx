@@ -59,7 +59,9 @@ export default function BlogDetail() {
         />
       </Head>
 
+
       <div className="min-h-screen bg-gradient-to-tr dark:from-black dark:to-purple-900/20 py-10 px-4 sm:px-6 lg:px-8 flex items-start justify-center">
+      {/* <Link href={"/Home"}>Home</Link> */}
         <div
           className={`
           w-full max-w-4xl mt-12 transition-all duration-700 ease-out

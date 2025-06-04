@@ -1,111 +1,115 @@
 [
-    {
-      "name": "Healthcare",
-      "slug": "healthcare",
-      "short_description": "Transforming care through intelligent analytics.",
-      "long_description": "We work with hospitals, clinics, and pharmaceutical companies to unlock insights that improve patient outcomes, optimize clinical operations, and accelerate innovation in healthcare delivery.",
-      "key_focus_areas": [
-        "Patient Risk Stratification",
-        "Clinical Trial Analytics",
-        "Claims & Operational Analytics",
-        "Predictive Health Monitoring"
-      ],
-      "seo_tags": [
-        "Healthcare Analytics",
-        "Clinical Insights",
-        "AI in Healthcare",
-        "Pharma Data Solutions"
-      ]
-    },
-    {
-      "name": "Financial Services",
-      "slug": "financial-services",
-      "short_description": "Enabling smarter, faster, and more secure financial decisions.",
-      "long_description": "Our solutions help banks, NBFCs, and fintech firms streamline operations, manage risks, and deliver personalized experiences through real-time analytics and predictive modeling.",
-      "key_focus_areas": [
-        "Credit Risk Scoring",
-        "Fraud Detection & Prevention",
-        "Customer Lifetime Value",
-        "Regulatory & Compliance Analytics"
-      ],
-      "seo_tags": [
-        "Financial Analytics",
-        "Risk Modeling",
-        "Fintech AI Solutions",
-        "Fraud Detection Systems"
-      ]
-    },
-    {
-      "name": "Manufacturing",
-      "slug": "manufacturing",
-      "short_description": "Driving efficiency and innovation with Industry 4.0 analytics.",
-      "long_description": "From predictive maintenance to process optimization, we help manufacturers use data to reduce downtime, improve quality, and increase throughput.",
-      "key_focus_areas": [
-        "Digital Twin and IoT Integration",
-        "Predictive Maintenance",
-        "Process Optimization",
-        "Supply Chain & Inventory Analytics"
-      ],
-      "seo_tags": [
-        "Smart Manufacturing",
-        "Industry 4.0",
-        "Predictive Maintenance",
-        "IoT Analytics"
-      ]
-    },
-    {
-      "name": "E-commerce & Retail",
-      "slug": "ecommerce-retail",
-      "short_description": "Personalized experiences powered by deep customer insights.",
-      "long_description": "We support online and offline retailers in optimizing the customer journey, improving conversions, and building loyalty using data science and machine learning.",
-      "key_focus_areas": [
-        "Customer Segmentation & Personalization",
-        "Demand Forecasting",
-        "Cart Abandonment Analysis",
-        "Product Recommendation Systems"
-      ],
-      "seo_tags": [
-        "E-commerce Analytics",
-        "Customer Behavior Insights",
-        "Retail AI",
-        "Sales Forecasting"
-      ]
-    },
-    {
-      "name": "Consulting & Professional Services",
-      "slug": "consulting-professional-services",
-      "short_description": "Augmenting advisory capabilities with data intelligence.",
-      "long_description": "We partner with consulting firms to deliver scalable analytics solutions that enhance client outcomes, automate reporting, and uncover new value opportunities.",
-      "key_focus_areas": [
-        "Strategic Analytics Advisory",
-        "BI Dashboard Development",
-        "NLP & Conversational AI",
-        "Custom Data Products"
-      ],
-      "seo_tags": [
-        "Consulting Analytics",
-        "BI Solutions",
-        "NLP for Services",
-        "AI in Consulting"
-      ]
-    },
-    {
-      "name": "Pharmaceuticals & Life Sciences",
-      "slug": "pharmaceuticals-life-sciences",
-      "short_description": "Accelerating research and outcomes through data.",
-      "long_description": "Our analytics solutions help pharma companies derive insights from clinical trials, real-world evidence, and supply chain data—driving innovation and regulatory efficiency.",
-      "key_focus_areas": [
-        "Drug Development Analytics",
-        "Clinical Trial Optimization",
-        "Pharmacovigilance",
-        "Sales & Marketing Analytics"
-      ],
-      "seo_tags": [
-        "Pharma Data Analytics",
-        "Clinical Research Insights",
-        "Drug Trial AI",
-        "Life Sciences BI"
-      ]
-    }
-  ]
-  
+  {
+    "name": "Healthcare",
+    "slug": "healthcare",
+    "short_description": "Transforming care through intelligent analytics.",
+    "long_description": "We work with hospitals, clinics, and pharmaceutical companies to unlock insights that improve patient outcomes, optimize clinical operations, and accelerate innovation in healthcare delivery.",
+    "key_focus_areas": [
+      "Patient Risk Stratification",
+      "Clinical Trial Analytics",
+      "Claims & Operational Analytics",
+      "Predictive Health Monitoring"
+    ],
+    "seo_tags": [
+      "Healthcare Analytics",
+      "Clinical Insights",
+      "AI in Healthcare",
+      "Pharma Data Solutions"
+    ]
+  },
+  {
+    "name": "Retail and Online",
+    "slug": "retail-and-online",
+    "short_description": "Enhancing retail experiences with data-driven personalization.",
+    "long_description": "We help e-commerce platforms and retail brands leverage historical sales, demand patterns, and customer behavior to drive smarter segmentation, personalized recommendations, dynamic pricing, and improved acquisition strategies.",
+    "key_focus_areas": [
+      "Customer Segmentation",
+      "Dynamic Pricing Optimization",
+      "Product Recommendation Systems",
+      "Consumer Trend Analysis",
+      "Lead Conversion Insights"
+    ],
+    "seo_tags": [
+      "Retail Analytics",
+      "E-commerce Insights",
+      "Personalized Shopping Experience",
+      "AI in Retail"
+    ]
+  },
+  {
+    "name": "Insurance",
+    "slug": "insurance",
+    "short_description": "Forecasting risk and behavior with predictive analytics.",
+    "long_description": "We support insurance providers in leveraging historical data and consumer trends to enhance underwriting, pricing, claims processing, marketing, and reserving. Our predictive analytics solutions empower better risk evaluation and informed decision-making across the insurance lifecycle.",
+    "key_focus_areas": [
+      "Predictive Underwriting",
+      "Claims Analytics",
+      "Risk Assessment & Management",
+      "Pricing Optimization",
+      "Customer Behavior Forecasting"
+    ],
+    "seo_tags": [
+      "Insurance Analytics",
+      "Risk Prediction",
+      "AI in Insurance",
+      "Claims Optimization"
+    ]
+  },
+  {
+    "name": "Banking & Finance",
+    "slug": "banking-and-finance",
+    "short_description": "Driving financial growth and loyalty through intelligent insights.",
+    "long_description": "We empower banks and financial institutions to harness both structured and unstructured data, enabling smarter decision-making for cross-selling, up-selling, and customer retention. Our solutions help improve financial margins while enhancing customer satisfaction through timely, personalized offers.",
+    "key_focus_areas": [
+      "Customer Retention Analytics",
+      "Cross-sell and Up-sell Optimization",
+      "Financial Risk Analysis",
+      "Sentiment Analysis on Unstructured Data",
+      "Personalized Financial Services"
+    ],
+    "seo_tags": [
+      "Banking Analytics",
+      "Financial Intelligence",
+      "Customer Insights in Finance",
+      "AI in Banking"
+    ]
+  },
+  {
+    "name": "Gaming",
+    "slug": "gaming",
+    "short_description": "Leveling up game experiences with advanced data analytics.",
+    "long_description": "We help game developers and publishers harness player activity data, system performance metrics, and spatial analytics to refine game design, enhance user engagement, identify bottlenecks, and inform future content development. Our solutions also support cheat detection and fair play enforcement.",
+    "key_focus_areas": [
+      "Player Behavior Analytics",
+      "Game Performance Optimization",
+      "In-Game Event Tracking",
+      "Cheat Detection & Prevention",
+      "Content Strategy and Personalization"
+    ],
+    "seo_tags": [
+      "Gaming Analytics",
+      "Player Insights",
+      "Game Design Optimization",
+      "AI in Gaming"
+    ]
+  },
+  {
+    "name": "Automotive",
+    "slug": "automotive",
+    "short_description": "Driving innovation with data from road to factory floor.",
+    "long_description": "We assist automotive manufacturers and mobility service providers in optimizing operations by analyzing data from GPS tracking, in-car sensors, manufacturing lines, and product usage. Our solutions enhance production efficiency, inform marketing strategies, and enable smarter decision-making across the vehicle lifecycle.",
+    "key_focus_areas": [
+      "Smart Manufacturing Analytics",
+      "Vehicle Usage Insights",
+      "Predictive Maintenance",
+      "Consumer Preference Analysis",
+      "Production Scheduling Optimization"
+    ],
+    "seo_tags": [
+      "Automotive Analytics",
+      "Smart Mobility Insights",
+      "In-Car Sensor Data",
+      "AI in Automotive"
+    ]
+  }
+]

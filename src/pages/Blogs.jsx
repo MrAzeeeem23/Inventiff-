@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Container from "../components/container/Container";
 import blogService from "../appwrite_controller/service";
 import Head from "next/head";
+import { Spotlight } from "@/components/ui/Spotlight";
 
 const ShinyText = dynamic(() => import("../animations/ShinyText"), {
   ssr: false,
@@ -118,9 +119,13 @@ function Blog() {
         <section
           ref={sectionRef}
           id="Blogs"
-          className="py-10 px-4"
-          aria-labelledby="latest-blogs-heading"
+          className="py-10 px-4 relative"
+          aria-labelledby="relative latest-blogs-heading "
         >
+          <Spotlight
+            className="-top-10 left-20 md:-top-20 md:left-60 -z-10 dark:invert"
+            fill="black"
+          />
           <h2
             id="latest-blogs-heading"
             className={`text-4xl md:text-5xl font-bold font-afacad mb-8 text-gray-800 dark:text-white transition-all duration-1000 ${

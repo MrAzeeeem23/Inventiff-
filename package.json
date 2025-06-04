@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@google/genai": "^1.0.0",
     "@react-three/drei": "^10.1.1",
     "@react-three/fiber": "^9.1.2",
     "appwrite": "^17.0.2",

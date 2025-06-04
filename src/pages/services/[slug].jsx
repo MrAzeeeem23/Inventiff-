@@ -6,6 +6,7 @@ import blogService from "@/appwrite_controller/service";
 import Loader from "@/components/utility/Loader";
 import Container from "@/components/container/Container";
 import { useRouter } from "next/router";
+import ContactCard from "../ContactCard";
 
 export default function ServiceDetail() {
   const [service, setService] = useState([]);
@@ -101,6 +102,7 @@ export default function ServiceDetail() {
               </div>
             ))}
           </Container>
+          <ContactCard />
         </div>
       )}
     </>

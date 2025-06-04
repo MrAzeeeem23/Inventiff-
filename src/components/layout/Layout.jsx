@@ -6,6 +6,7 @@ function Layout({ children }) {
     <>
     <Header />
     <main>{children}</main>
+    {/* <ChatBot /> */}
     <Footer />
     </>
   )

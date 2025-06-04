@@ -1,6 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import { ChevronRight, Target, BarChart3, Cog } from "lucide-react";
 import Container from "@/components/container/Container";
+import BlurText from "@/animations/BlurText";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 // Data for offerings
 const offeringsData = [
@@ -161,18 +163,25 @@ function Offerings() {
 
             <section
               ref={sectionRef}
-              className="relative overflow-hidden backdrop-blur-sm"
+              className="relative overflow-hidden"
               aria-labelledby="offerings-heading"
             >
               <div className="flex flex-col md:flex-row md:h-screen">
                 {/* Left */}
                 <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center transition">
-                  <h1
+                  {/* <h1
                     id="offerings-heading"
                     className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-4 md:mb-6 drop-shadow-lg font-afacad transition-all"
                   >
                     Data Science Offerings
-                  </h1>
+                  </h1> */}
+                  <BlurText
+                    text="Data Science Offerings"
+                    delay={150}
+                    animateBy="words"
+                    direction="top"
+                    className="text-3xl md:text-5xl font-bold text-black dark:text-white mb-4 md:mb-6 drop-shadow-lg font-afacad transition-all"
+                  />
                   <p className="text-base font-Poppins md:text-lg text-gray-700 dark:text-gray-300">
                     Leverage your data to make smarter, faster business
                     decisions. We offer flexible, scalable solutions tailored to
@@ -180,7 +189,6 @@ function Offerings() {
                   </p>
                 </div>
 
-                {/* Right (scrolling cards) - MODERNIZED */}
                 <div className="w-full md:w-1/2">
                   <div
                     ref={cardsRef}
@@ -196,14 +204,11 @@ function Offerings() {
                       return (
                         <div
                           key={index}
-                          className="group relative overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] p-8 text-left font-Poppins border border-white/20 dark:border-gray-700/30"
+                          className="group relative overflow-hidden bg-white/20 dark:bg-gray-800/20 backdrop-blur-xl rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] p-8 text-left font-Poppins border border-white/20 dark:border-gray-700/30"
                         >
-                          {/* Animated Background Effect */}
                           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
-                          {/* Content */}
                           <div className="relative z-10">
-                            {/* Icon and Title Row */}
                             <div className="flex items-center gap-4 mb-4">
                               <div className="flex p-3 rounded-2xl bg-gray-100 dark:bg-gray-700 shadow-lg group-hover:scale-110 transition-transform duration-300">
                                 <IconComponent className="w-6 h-6 text-gray-600 dark:text-gray-300" />
@@ -242,6 +247,7 @@ function Offerings() {
                 </div>
               </div>
             </section>
+            <BackgroundBeams className="-z-10 absolute inset-0" />
           </div>
         </Container>
       </section>

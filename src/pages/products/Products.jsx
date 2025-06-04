@@ -68,7 +68,7 @@ export default function ProductList() {
                 <div
                   key={product.$id}
                   onClick={() => openProductModal(product)}
-                  className="relative bg-white/90 dark:bg-gray-900/60 backdrop-blur-sm border border-gray-200 dark:border-gray-700/50 rounded-2xl p-8 h-full cursor-pointer shadow-lg dark:shadow-2xl overflow-hidden"
+                  className="relative backdrop-blur-sm rounded-2xl p-8 h-full cursor-pointer shadow-lg dark:shadow-2xl overflow-hidden"
                 >
                   {/* Subtle gradient background */}
                   <div className="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-white/30 dark:from-gray-800/30 dark:to-gray-900/50 rounded-2xl" />

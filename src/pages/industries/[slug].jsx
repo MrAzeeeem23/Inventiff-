@@ -25,7 +25,7 @@ export default function IndustryDetails() {
         <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-700/25 bg-[size:40px_40px] opacity-20 dark:opacity-65 pointer-events-none z-0"></div>
         <div className="relative z-10 flex flex-col lg:flex-row justify-between gap-10">
           <div className="max-w-4xl mt-12 mb-8 flex-1">
-            <h1 className="text-4xl sm:text-5xl font-bold font-afacad text-black dark:text-white">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold font-afacad text-black dark:text-white">
               {industry.name}
             </h1>
             <p className="text-gray-700 dark:text-gray-400 my-2 text-lg sm:text-xl font-afacad font-bold">
