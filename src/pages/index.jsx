@@ -12,7 +12,7 @@ function Layout() {
     <>
       <Home />
       <ChatBot />
-      <Offerings />
+      {/* <Offerings /> */}
       <Experience />
       <Blog />
       <AnalyticsServices />
