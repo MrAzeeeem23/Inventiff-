@@ -135,7 +135,7 @@ export default function AnalyticsServices() {
         />
         <meta property="og:type" content="website" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://yourwebsite.com/analytics-services" />
+        <link rel="canonical" href="https://inventiff.com/analytics-services" />
       </Head>
       <div 
         ref={sectionRef} 

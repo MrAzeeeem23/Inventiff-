@@ -6,7 +6,7 @@ import Container from "../container/Container";
 import Link from "next/link";
 
 // logo path
-const Logo = "/assets/Inventiff_logo.jpg"
+const Logo = "/assets/Logo.svg"
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,18 +40,19 @@ function Header() {
               width: "100%",
               borderRadius: "0px",
               marginTop: "0px",
+              ease: "none",
             },
             {
               width: matches ? "50%" : "90%",
+              borderRadius: "4rem",
+              marginTop: "10px",
+              ease: "power4.inOut",
               scrollTrigger: {
                 trigger: headerRef.current,
                 start: "top top",
                 end: "bottom top",
-                scrub: true,
+                scrub: 1.2, // <-- smooth scrub over 1.2 seconds
               },
-              borderRadius: "4rem",
-              marginTop: "10px",
-              ease: "power4.inOut",
             }
           );
         };
@@ -97,7 +98,7 @@ function Header() {
           <a href="/" className="hover:text-gray-300">
             <img
               src={Logo}
-              className="w-10 rounded-full invert dark:invert-0"
+              className="w-12 rounded-full invert dark:invert-0"
               alt="Logo"
             />
           </a>
@@ -107,9 +108,10 @@ function Header() {
               <Link
                 key={index}
                 href={item.path}
-                className={`text-base lg:text-lg font-medium hover:text-gray-300 font-afacad`}
+                className={`relative text-base lg:text-lg font-medium font-afacad group transition-colors duration-200 hover:text-gray-600 dark:hover:text-gray-300`}
               >
                 {item.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-current transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </nav>
@@ -142,14 +144,14 @@ function Header() {
 
         <div
           ref={mobileMenuRef}
-          className="md:hidden px-6 pt-2 pb-4 bg-white/90 dark:bg-black/90 backdrop-blur-md rounded-b-xl shadow-md space-y-3 mt-1 absolute w-full opacity-0 pointer-events-none"
+          className="md:hidden px-6 pt-2 pb-4 bg-white/90 dark:bg-black/90 backdrop-blur-xl rounded-b-xl shadow-md space-y-3 mt-1 absolute w-full opacity-0 pointer-events-none"
         >
           {navItems.map((item, index) => (
             <a
               key={index}
               href={item.path}
               onClick={handleNavClick}
-              className="block text-lg font-medium hover:text-gray-300 py-2"
+              className="block text-lg font-afacad hover:text-gray-500 dark:hover:text-gray-600 py-2"
             >
               {item.name}
             </a>

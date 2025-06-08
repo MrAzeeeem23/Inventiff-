@@ -47,10 +47,11 @@ We are a privately held company with a growing team of 11–50 employees, offeri
             </h2>
           </div>
 
-          <div className="w-full flex justify-end">
-            <p className="text-md max-w-2xl text-black dark:text-white font-Poppins">
+          <div className="w-full flex justify-start">
+            <p className="text-4xl font-semibold max-w-4xl text-black/80 dark:text-white/50 font-afacad">
               {aboutDescription}
             </p>
+            {/* <img src="assets/Logo.svg" alt="logo" loading="lazy" className="w-20 h-auto rounded-lg shadow-lg" /> */}
           </div>
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16">
@@ -82,6 +83,28 @@ We are a privately held company with a growing team of 11–50 employees, offeri
             />
           </div>
 
+          {/* What We Offer Section */}
+          <div className="w-full flex flex-col gap-8">
+            <h3 className="text-3xl sm:text-4xl font-bold dark:text-white font-afacad">
+              What We Offer
+            </h3>
+            <p className="text-md font-Poppins text-gray-700 dark:text-gray-400">
+              Our core services include:
+            </p>
+            <ul className="list-disc mx-2 list-inside text-md font-Poppins text-gray-700 dark:text-gray-400 grid grid-cols-1 sm:grid-cols-2 gap-y-4">
+              <li>Data Science Consulting</li>
+              <li>Artificial Intelligence Solutions</li>
+              <li>Predictive & Statistical Modeling</li>
+              <li>Machine Learning & Deep Learning</li>
+              <li>Natural Language Processing (NLP) & Chatbots</li>
+              <li>Big Data Analytics & IoT Integration</li>
+              <li>Robotic Process Automation (RPA)</li>
+              <li>Digital Twin & Industry 4.0 Analytics</li>
+              <li>Decision Optimization & Business Intelligence</li>
+              <li>Operationalizing Analytics at Scale</li>
+            </ul>
+          </div>
+
           <Values />
 
           <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-16">
@@ -103,6 +126,12 @@ We are a privately held company with a growing team of 11–50 employees, offeri
                 />
               </picture>
             </div>
+          </div>
+          <div className="text-center mt-16">
+            <p className="text-3xl font-afacad text-black dark:text-white">
+              Inventiff Analytics — Your trusted partner in data-driven
+              transformation.
+            </p>
           </div>
           <ContactCard />
         </div>

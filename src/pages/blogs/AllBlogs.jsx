@@ -60,6 +60,7 @@ function AllBlogs() {
               <img
                 src={post.thumbnail_URL}
                 alt="Blog cover"
+                loading='lazy'
                 className="object-cover w-full h-full hover:scale-105 transition-all"
               />
             </div>

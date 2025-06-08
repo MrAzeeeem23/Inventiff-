@@ -72,6 +72,7 @@ export default function BlogDetail() {
             <img
               src={blog.thumbnail_URL}
               alt={blog.Title}
+              loading='lazy'
               className="relative object-cover my-7 rounded-2xl w-full h-36"
             />
             <h1 className="absolute inset-0 flex items-center justify-center text-3xl sm:text-4xl font-bold font-afacad dark:bg-black/40 text-white leading-snug text-center px-4 backdrop-blur-sm rounded-2xl">

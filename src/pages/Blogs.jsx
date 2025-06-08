@@ -181,6 +181,7 @@ function Blog() {
                           <img
                             src={post.thumbnail_URL}
                             alt="Blog cover"
+                            loading="lazy"
                             className="blog-image object-cover p-2 rounded-2xl w-full h-full"
                           />
                         </div>

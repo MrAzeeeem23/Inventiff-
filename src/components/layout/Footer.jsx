@@ -2,6 +2,8 @@ import React from 'react'
 
 function Footer() {
   const Logo = "/assets/Inventiff_logo.jpg"
+
+  console.log(`devloped by Ak: ${"https://azeemkhan23.netlify.app/"}`)
   
   return (
     <footer className="w-full bg-white text-black relative dark:bg-black dark:text-white border-t border-gray-100 dark:border-gray-900">

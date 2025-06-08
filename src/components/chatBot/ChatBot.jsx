@@ -3,6 +3,7 @@ import GetAIResponce from "@/appwrite_controller/ChatBot.controller.mjs";
 import { X, User, Bot, Send, MessageCircle } from "lucide-react";
 import { useRef } from "react";
 import ReactMarkdown from "react-markdown";
+import Link from "next/link";
 
 function ChatBot() {
   const [message, setMessage] = useState([
